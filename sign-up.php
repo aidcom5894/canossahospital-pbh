@@ -1,0 +1,403 @@
+<?php 
+    include('config.php');
+
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    // SweetAlert ke liye variables initialize kar rahe hain
+    $showAlert = false;
+    $alertTitle = "";
+    $alertText = "";
+    $alertIcon = "";
+    $alertRedirect = "";
+    $btnColor = "#3085d6"; // Default blue confirm button for success
+
+    if (isset($_POST['submit'])) {
+            $Name     = trim($_POST['userFullName']);
+            $UserID   = trim($_POST['username']);
+            $Email    = trim($_POST['email']);
+            $Contact  = trim($_POST['contact']);
+            $password = $_POST['password'];
+            $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+
+            $userAvatar = array('avatar1.png','avatar2.png','avatar3.png','avatar5.png');
+            $userProfilePic = $base_url . "avatars/" . $userAvatar[array_rand($userAvatar)];
+
+            // 1. Check if Email Already Exists
+            $checkEmailQuery = $conn->prepare("SELECT email FROM user_directory WHERE email = ?");
+            $checkEmailQuery->bind_param("s", $Email);
+            $checkEmailQuery->execute();
+            $emailResult = $checkEmailQuery->get_result();
+
+            // 2. Signup Limit Check 
+            $countQuery = $conn->query("SELECT * FROM user_directory");
+
+            if ($emailResult->num_rows > 0) {
+                // Email already registered flow
+                $showAlert = true;
+                $alertTitle = "Go to login page";
+                $alertText = "Email is already registered!";
+                $alertIcon = "error";
+                $alertRedirect = "sign-in.php";
+                $btnColor = "#d33"; // Red button for error
+            } 
+            elseif ($countQuery->num_rows >= 3) {
+                // Admin limit reached flow
+                $showAlert = true;
+                $alertTitle = "Limit Reached!";
+                $alertText = "Only Admin is allowed!";
+                $alertIcon = "warning";
+                $alertRedirect = "sign-in.php";
+                $btnColor = "#d33"; // Red button for warning
+            } 
+            else {
+                /* INSERT USER (Runs only if email is unique and limit is within bounds) */
+                $insertQuery = "
+                INSERT INTO user_directory  ( name,email, contact, user_id, password, avatar )
+                VALUES ( '$Name', '$Email', '$Contact', '$UserID', '$hashedpassword', '$userProfilePic' )";
+
+                if(mysqli_query($conn, $insertQuery)) {
+                    $showAlert = true;
+                    $alertTitle = "Welcome!";
+                    $alertText = "Your account has been successfully created!";
+                    $alertIcon = "success";
+                    $alertRedirect = "sign-in.php";
+                    $btnColor = "#3085d6"; 
+                } else {
+                    echo "Error: " . mysqli_error($conn);
+                }
+            }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+      <title>Cannosa Hospital Sign-up Page</title>
+      <link rel="icon" type="image/png" href="medera/images/cfavicon.png" sizes="16x16">
+      <link rel="stylesheet" href="assets/css/remixicon.css">
+      <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/lib/apexcharts.css">
+      <link rel="stylesheet" href="assets/css/lib/dataTables.min.css">
+      <link rel="stylesheet" href="assets/css/lib/editor-katex.min.css">
+      <link rel="stylesheet" href="assets/css/lib/editor.atom-one-dark.min.css">
+      <link rel="stylesheet" href="assets/css/lib/editor.quill.snow.css">
+      <link rel="stylesheet" href="assets/css/lib/flatpickr.min.css">
+      <link rel="stylesheet" href="assets/css/lib/full-calendar.css">
+      <link rel="stylesheet" href="assets/css/lib/jquery-jvectormap-2.0.5.css">
+      <link rel="stylesheet" href="assets/css/lib/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/lib/slick.css">
+      <link rel="stylesheet" href="assets/css/lib/prism.css">
+      <link rel="stylesheet" href="assets/css/lib/file-upload.css">
+
+      <link rel="stylesheet" href="assets/css/lib/audioplayer.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+          /* Poore popup ka global size control karne ke liye */
+          .swal2-popup {
+              font-family: 'Inter', sans-serif !important; 
+              padding: 1.5rem !important;
+              border-radius: 16px !important;
+          }
+          /* Main Title ka font size chhota karne ke liye */
+          .swal2-title {
+              font-size: 20px !important; 
+              font-weight: 600 !important;
+              color: #1e293b !important;
+          }
+          /* Niche waale Text description ka size chhota karne ke liye */
+          .swal2-html-container {
+              font-size: 14px !important; 
+              color: #64748b !important;
+              margin: 8px 0 0 0 !important;
+          }
+          /* Confirm Button ka size chhota karne ke liye */
+          .swal2-confirm {
+              font-size: 13px !important;
+              padding: 8px 20px !important;
+              border-radius: 8px !important;
+          }
+          /* Icon ka size thoda normal karne ke liye */
+          .swal2-icon {
+              transform: scale(0.85); 
+              margin-top: 10px !important;
+          }
+
+          /* Mobile view responsiveness fix */
+          @media (max-width: 480px) {
+              .swal2-popup {
+                  width: 85% !important;
+                  max-width: 85% !important;
+                  margin: auto !important;
+                  padding: 1.25rem !important;
+              }
+              .swal2-title {
+                  font-size: 18px !important;
+              }
+              .swal2-html-container {
+                  font-size: 13px !important;
+              }
+          }
+      </style>
+
+    </head>
+
+<body>
+
+  <div class="body-overlay"></div>
+
+    <button type="button"
+        class="theme-customization__button w-48-px h-48-px bg-primary-600 text-white rounded-circle d-flex justify-content-center align-items-center position-fixed end-0 bottom-0 mb-40 me-40 text-2xxl bg-hover-primary-700">
+        <i class="ri-settings-3-line animate-spin"></i>
+    </button>
+    <div class="theme-customization-sidebar w-100 bg-base h-100vh overflow-y-auto position-fixed end-0 top-0 shadow-lg">
+        <div class="d-flex align-items-center gap-3 py-16 px-24 justify-content-between border-bottom">
+            <div>
+                <h6 class="text-sm dark:text-white">Theme Settings</h6>
+                <p class="text-xs mb-0 text-neutral-500 dark:text-neutral-200">Customize and preview instantly</p>
+            </div>
+            <button data-slot="button"
+                class="theme-customization-sidebar__close text-neutral-900 bg-transparent text-hover-primary-600 d-flex text-xl">
+                <i class="ri-close-fill"></i>
+            </button>
+        </div>
+
+        <div class="d-flex flex-column gap-48 p-24 overflow-y-auto flex-grow-1">
+
+            <div class="theme-setting-item">
+                <h6 class="fw-medium text-primary-light text-md mb-3">Theme Mode</h6>
+                <div class="d-grid grid-cols-3 gap-3 dark-light-mode">
+                    <button type="button"
+                        class="theme-btn theme-setting-item__btn d-flex align-items-center justify-content-center h-64-px rounded-3 text-xl active"
+                        data-theme="light">
+                        <i class="ri-sun-line"></i>
+                    </button>
+                    <button type="button"
+                        class="theme-btn theme-setting-item__btn d-flex align-items-center justify-content-center h-64-px rounded-3 text-xl"
+                        data-theme="dark">
+                        <i class="ri-moon-line"></i>
+                    </button>
+                    <button type="button"
+                        class="theme-btn theme-setting-item__btn d-flex align-items-center justify-content-center h-64-px rounded-3 text-xl"
+                        data-theme="system">
+                        <i class="ri-computer-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="theme-setting-item">
+                <h6 class="fw-medium text-primary-light text-md mb-3">Page Direction</h6>
+                <div class="d-grid grid-cols-2 gap-3">
+                    <button type="button"
+                        class="theme-setting-item__btn ltr-mode-btn d-flex align-items-center justify-content-center gap-2 h-56-px rounded-3 text-xl">
+                        <span><i class="ri-align-item-left-line"></i></span>
+                        <span class="h6 text-sm font-medium mb-0">LTR</span>
+                    </button>
+
+                    <button type="button"
+                        class="theme-setting-item__btn rtl-mode-btn d-flex align-items-center justify-content-center gap-2 h-56-px rounded-3 text-xl">
+                        <span class="h6 text-sm font-medium mb-0">RTL</span>
+                        <span><i class="ri-align-item-right-line"></i></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="theme-setting-item">
+                <h6 class="fw-medium text-primary-light text-md mb-3">Color Schema</h6>
+                <div class="d-grid grid-cols-3 gap-3">
+                    <button type="button"
+                        class="color-picker-btn d-flex flex-column justify-content-center align-items-center"
+                        data-color="blue">
+                        <span class="color-picker-btn__box h-40-px w-100 rounded-3"
+                            style="background-color: #2563eb;"></span>
+                        <span class="fw-medium mt-1" style="color: #2563eb;">Blue</span>
+                    </button>
+                    <button type="button"
+                        class="color-picker-btn d-flex flex-column justify-content-center align-items-center"
+                        data-color="red">
+                        <span class="color-picker-btn__box h-40-px w-100 rounded-3"
+                            style="background-color: #dc2626;"></span>
+                        <span class="fw-medium mt-1" style="color: #dc2626;">Red</span>
+                    </button>
+                    <button type="button"
+                        class="color-picker-btn d-flex flex-column justify-content-center align-items-center"
+                        data-color="green">
+                        <span class="color-picker-btn__box h-40-px w-100 rounded-3"
+                            style="background-color: #16a34a;"></span>
+                        <span class="fw-medium mt-1" style="color: #16a34a;">Green</span>
+                    </button>
+                    <button type="button"
+                        class="color-picker-btn d-flex flex-column justify-content-center align-items-center"
+                        data-color="yellow">
+                        <span class="color-picker-btn__box h-40-px w-100 rounded-3"
+                            style="background-color: #ff9f29;"></span>
+                        <span class="fw-medium mt-1" style="color: #ff9f29;">Yellow</span>
+                    </button>
+                    <button type="button"
+                        class="color-picker-btn d-flex flex-column justify-content-center align-items-center"
+                        data-color="cyan">
+                        <span class="color-picker-btn__box h-40-px w-100 rounded-3"
+                            style="background-color: #00b8f2;"></span>
+                        <span class="fw-medium mt-1" style="color: #00b8f2;">Cyan</span>
+                    </button>
+                    <button type="button"
+                        class="color-picker-btn d-flex flex-column justify-content-center align-items-center"
+                        data-color="violet">
+                        <span class="color-picker-btn__box h-40-px w-100 rounded-3"
+                            style="background-color: #7c3aed;"></span>
+                        <span class="fw-medium mt-1" style="color: #7c3aed;">Violet</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <section class="auth bg-base d-flex flex-wrap">  
+        <div class="auth-left d-lg-block d-none">
+            <div class="d-flex align-items-center flex-column h-100 justify-content-center">
+                <img src="assets/images/auth/auth-img.png" alt="Image">
+            </div>
+        </div>
+
+        <div class="auth-right py-32 px-24 d-flex flex-column justify-content-center">
+            <div class="max-w-464-px mx-auto w-100">
+
+                <div>
+                    <a href="sign-up.php" class="mb-40 max-w-290-px">
+                        <img src="assets/images/logo.png" alt="Image">
+                    </a>
+                    <h4 class="mb-12">Sign Up to your Account</h4>
+                    <p class="mb-32 text-secondary-light text-lg">Welcome back! please enter your detail</p>
+                </div>
+
+                <form method="POST" autocomplete="off">
+                       <div class="icon-field mb-16">
+                            <span class="icon top-50 translate-middle-y">
+                                <iconify-icon icon="f7:person"></iconify-icon>
+                            </span>
+                            <input type="text" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Enter Your Full Name" name="userFullName" required>
+                        </div>
+                        
+
+                        <?php 
+                            $usernameCharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                            $usernameNumber = '0123456789';
+                            $userFullName = substr(str_shuffle($usernameCharacter), 0,3).substr(str_shuffle($usernameNumber), 0,3);
+                        ?>
+                        <div class="mb-20">
+                            <div class="position-relative ">
+                                <div class="icon-field">
+                                    <span class="icon top-50 translate-middle-y">
+                                        <iconify-icon icon="solar:user-id-outline"></iconify-icon>
+                                    </span> 
+                                    <input type="text" class="form-control h-56-px bg-neutral-50 radius-12" name="username" placeholder="UserId" value="<?php echo "ADM".$userFullName; ?>" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon-field mb-16">
+                            <span class="icon top-50 translate-middle-y">
+                                <iconify-icon icon="mage:email"></iconify-icon>
+                            </span>
+                            <input type="email" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Email" name="email" required>
+                        </div>
+
+                        <div class="mb-20">
+                            <div class="position-relative ">
+                                <div class="icon-field">
+                                    <span class="icon top-50 translate-middle-y">
+                                        <iconify-icon icon="solar:phone-outline"></iconify-icon>
+                                    </span> 
+                                    <input type="number" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Contact" name="contact" onkeypress="if(this.value.length === 10)return false;" required>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="mb-20">
+                            <div class="position-relative ">
+                                <div class="icon-field"> 
+                                    <input type="password" class="form-control h-56-px bg-neutral-50 radius-12" id="your-password" placeholder="Password" name="password" minlength="8" required>
+                                </div>
+                                <span class="toggle-password ri-lock-line cursor-pointer position-absolute end-0 top-50 translate-middle-y me-16 text-secondary-light" data-toggle="#your-password" ></span>
+                            </div>
+                        </div>
+
+                    <div>
+                        <div class="d-flex justify-content-between gap-2">
+                            <div class="form-check style-check d-flex align-items-start">
+                                <input class="form-check-input border border-neutral-300 mt-4" type="checkbox" value="" id="condition" required>
+                                <label class="form-check-label text-sm" for="condition">
+                                    By creating an account means you agree to the 
+                                    <a href="javascript:void(0)" class="text-primary-600 fw-semibold">Terms & Conditions</a> and our 
+                                    <a href="javascript:void(0)" class="text-primary-600 fw-semibold">Privacy Policy</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32" name="submit"> Sign Up</button>
+
+                    <div class="mt-32 text-center text-sm">
+                        <p class="mb-0">Already have an account? <a href="sign-in.php" class="text-primary-600 fw-semibold">Sign In</a></p>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+  <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/lib/apexcharts.min.js"></script>
+  <script src="assets/js/lib/dataTables.min.js"></script>
+  <script src="assets/js/lib/iconify-icon.min.js"></script>
+  <script src="assets/js/lib/jquery-ui.min.js"></script>
+  <script src="assets/js/lib/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="assets/js/lib/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/js/lib/magnifc-popup.min.js"></script>
+  <script src="assets/js/lib/slick.min.js"></script>
+  <script src="assets/js/lib/prism.js"></script>
+  <script src="assets/js/lib/file-upload.js"></script>
+  <script src="assets/js/lib/audioplayer.js"></script>
+  
+  <script src="assets/js/app.js"></script>
+
+<script>
+      // ================== Password Show Hide Js Start ==========
+      function initializePasswordToggle(toggleSelector) {
+        $(toggleSelector).on('click', function() {
+            $(this).toggleClass("ri-eye-off-line");
+            var input = $($(this).attr("data-toggle"));
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+    }
+    // Call the function
+    initializePasswordToggle('.toggle-password');
+  // ========================= Password Show Hide Js End ===========================
+</script>
+
+<?php if ($showAlert): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire({
+            title: '<?php echo $alertTitle; ?>',
+            text: '<?php echo $alertText; ?>',
+            icon: '<?php echo $alertIcon; ?>',
+            confirmButtonColor: '<?php echo $btnColor; ?>'
+        }).then(() => {
+            window.location.href = '<?php echo $alertRedirect; ?>';
+        });
+    });
+</script>
+<?php endif; ?>
+
+</body>
+</html>
