@@ -52,7 +52,7 @@
                             <ul class="sub-menu">
                                 <li><a href="about_us">ABOUT US</a></li>
                                 <li><a href="gallery">GALLERY</a></li>
-                                <li><a href="news-event.php">NEWS & EVENT</a></li>
+                                <li><a href="news-event">NEWS & EVENT</a></li>
                                 <li><a href="index.php#facilities">Facilities</a></li>
                                 <li><a href="about_us.php#message">Message</a></li>
                             </ul>
