@@ -173,7 +173,7 @@
 									<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
 										<ul class="navbar-nav">
 											<li class="nav-item">
-												<a class="nav-link link-inside" href="#home">Home</a>
+												<a class="nav-link link-inside" href="<?php echo $base_url; ?>">Home</a>
 											</li>
 											<li class="nav-item dropdown">
 		                                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1007,7 +1007,7 @@
 						</ul>
 
 						<ul class="row list-unstyled li-a">
-						    <li class="col-4"><a href="#home">Home</a></li>
+						    <li class="col-4"><a href="<?php echo $base_url; ?>">Home</a></li>
 						    <li class="col-4"><a href="about_us">About Us</a></li>
 						    <li class="col-4"><a href="#departmentsSection">Departments</a></li>
 						    <li class="col-4"><a href="#facilities">Facilities</a></li>
