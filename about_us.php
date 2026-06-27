@@ -50,9 +50,9 @@
 
                         <li class="active"><a href="#">About Us<span class="arrow"></span></a>
                             <ul class="sub-menu">
-                                <li><a href="about_us">ABOUT US</a></li>
+                                <li><a href="about_us.php">ABOUT US</a></li>
                                 <li><a href="gallery.php">GALLERY</a></li>
-                                <li><a href="news-event">NEWS & EVENT</a></li>
+                                <li><a href="news-event.php">NEWS & EVENT</a></li>
                                 <li><a href="index.php#facilities">Facilities</a></li>
                                 <li><a href="about_us.php#message">Message</a></li>
                             </ul>
@@ -442,7 +442,7 @@
 	                <!-- Pure Flexbox Grid layout to enforce 3 items per line perfectly -->
 	                <div class="screenshot-flex-wrapper">
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>">Home</a></div>
-	                    <div class="grid-item"><a href="about_us">About Us</a></div>
+	                    <div class="grid-item"><a href="about_us.php">About Us</a></div>
 	                    <div class="grid-item"><a href="index.php#departmentsSection">Departments</a></div>
 	                    
 	                    <div class="grid-item"><a href="index.php#facilities">Facilities</a></div>

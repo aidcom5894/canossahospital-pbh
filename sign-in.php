@@ -39,7 +39,7 @@
                 $alertTitle = "Invalid Password!";
                 $alertText = "Please enter correct password!";
                 $alertIcon = "error";
-                $alertRedirect = "sign-in";
+                $alertRedirect = "sign-in.php";
             }
         } else {
             // Invalid Email Configuration
@@ -47,7 +47,7 @@
             $alertTitle = "Invalid Email!";
             $alertText = "Email not found in system!";
             $alertIcon = "error";
-            $alertRedirect = "sign-in";
+            $alertRedirect = "sign-in.php";
         }
     }
 ?>

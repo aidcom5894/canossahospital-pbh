@@ -38,7 +38,7 @@
                 $alertTitle = "Go to login page";
                 $alertText = "Email is already registered!";
                 $alertIcon = "error";
-                $alertRedirect = "sign-in";
+                $alertRedirect = "sign-in.php";
                 $btnColor = "#d33"; // Red button for error
             } 
             elseif ($countQuery->num_rows >= 3) {
@@ -47,7 +47,7 @@
                 $alertTitle = "Limit Reached!";
                 $alertText = "Only Admin is allowed!";
                 $alertIcon = "warning";
-                $alertRedirect = "sign-in";
+                $alertRedirect = "sign-in.php";
                 $btnColor = "#d33"; // Red button for warning
             } 
             else {
@@ -61,7 +61,7 @@
                     $alertTitle = "Welcome!";
                     $alertText = "Your account has been successfully created!";
                     $alertIcon = "success";
-                    $alertRedirect = "sign-in";
+                    $alertRedirect = "sign-in.php";
                     $btnColor = "#3085d6"; 
                 } else {
                     echo "Error: " . mysqli_error($conn);

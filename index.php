@@ -180,11 +180,11 @@ if($insertData)
                                             About Us
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                                            <a class="dropdown-item " href="about_us">About Us</a>
+                                            <a class="dropdown-item " href="about_us.php">About Us</a>
                                             <a class="dropdown-item" href="gallery.php">GALLERY</a>
-                                            <a class="dropdown-item " href="news-event">NEWS & EVENT</a>
+                                            <a class="dropdown-item " href="news-event.php">NEWS & EVENT</a>
                                             <a class="dropdown-item link-inside" href="#facilities">FACILITIES</a>
-                                            <a class="dropdown-item " href="about_us#message">Message</a>
+                                            <a class="dropdown-item " href="about_us.php#message">Message</a>
                                         </div>
                                     </li>
 									<li class="nav-item">
@@ -1008,7 +1008,7 @@ if($insertData)
 
 				<ul class="row list-unstyled li-a">
 				    <li class="col-4"><a href="<?php echo $base_url; ?>">Home</a></li>
-				    <li class="col-4"><a href="about_us">About Us</a></li>
+				    <li class="col-4"><a href="about_us.php">About Us</a></li>
 				    <li class="col-4"><a href="#departmentsSection">Departments</a></li>
 				    <li class="col-4"><a href="#facilities">Facilities</a></li>
 				    <li class="col-4"><a href="#servicesSection">Service</a></li>
@@ -1017,7 +1017,7 @@ if($insertData)
 				    <li class="col-4"><a href="#contactSection">Contact Us</a></li>
 
 				    <li class="col-4"><a href="about_us#goal">Our Goal</a></li>
-				    <li class="col-4"><a href="news-event">News & Event</a></li>
+				    <li class="col-4"><a href="news-event.php">News & Event</a></li>
 				    <li class="col-4"><a href="gallery.php">Gallery</a></li>
 				</ul>
 			</div>
