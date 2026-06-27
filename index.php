@@ -181,10 +181,10 @@
 		                                        </a>
 		                                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
 		                                            <a class="dropdown-item " href="about_us">About Us</a>
-		                                            <a class="dropdown-item " href="gallery.php">GALLERY</a>
-		                                            <a class="dropdown-item " href="news-event.php#readNewevent">NEWS & EVENT</a>
+		                                            <a class="dropdown-item " href="gallery">GALLERY</a>
+		                                            <a class="dropdown-item " href="news-event#readNewevent">NEWS & EVENT</a>
 		                                            <a class="dropdown-item link-inside" href="#facilities">FACILITIES</a>
-		                                            <a class="dropdown-item " href="about_us.php#message">Message</a>
+		                                            <a class="dropdown-item " href="about_us#message">Message</a>
 		                                        </div>
 		                                    </li>
 											<li class="nav-item">
@@ -204,7 +204,7 @@
 												<a class="nav-link link-inside" href="#contactSection">Contact Us</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="sign-in.php">Login</a>
+												<a class="nav-link " href="sign-in">Login</a>
 											</li>
 										</ul>
 									</div>
@@ -894,7 +894,7 @@
 			                                <?php echo $News_Desc; ?>
 			                            </p>
 			                            
-			                            <a href="news-event.php?id=<?php echo $Id; ?>" class="btn-read-more" style="font-weight: 500; font-size: 14px; color: #0284c7; text-decoration: none;">
+			                            <a href="news-event?id=<?php echo $Id; ?>" class="btn-read-more" style="font-weight: 500; font-size: 14px; color: #0284c7; text-decoration: none;">
 			                                <i class="icon-play" style="font-size: 11px; margin-right: 5px;"></i>Read more
 			                            </a>
 			                        </div>
@@ -1008,7 +1008,7 @@
 
 						<ul class="row list-unstyled li-a">
 						    <li class="col-4"><a href="#home">Home</a></li>
-						    <li class="col-4"><a href="about_us.php">About Us</a></li>
+						    <li class="col-4"><a href="about_us">About Us</a></li>
 						    <li class="col-4"><a href="#departmentsSection">Departments</a></li>
 						    <li class="col-4"><a href="#facilities">Facilities</a></li>
 						    <li class="col-4"><a href="#servicesSection">Service</a></li>
@@ -1016,8 +1016,8 @@
 						    <li class="col-4"><a href="#specialistsSection">Team</a></li>
 						    <li class="col-4"><a href="#contactSection">Contact Us</a></li>
 
-						    <li class="col-4"><a href="about_us.php#goal">Our Goal</a></li>
-						    <li class="col-4"><a href="news-event.php">News & Event</a></li>
+						    <li class="col-4"><a href="about_us#goal">Our Goal</a></li>
+						    <li class="col-4"><a href="news-event">News & Event</a></li>
 						    <li class="col-4"><a href="#gallery">Gallery</a></li>
 						</ul>
 					</div>
