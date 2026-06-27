@@ -46,12 +46,12 @@
             <div class="page-header-menu">
                 <div class="container">
                     <ul class="menu">
-                        <li><a href="index.php#home">HOME<span class="arrow"></span></a></li>
+                        <li><a href="<?php echo $base_url; ?>">HOME<span class="arrow"></span></a></li>
 
                         <li class="active"><a href="#">About Us<span class="arrow"></span></a>
                             <ul class="sub-menu">
-                                <li><a href="about_us.php">ABOUT US</a></li>
-                                <li><a href="gallery.php">GALLERY</a></li>
+                                <li><a href="about_us">ABOUT US</a></li>
+                                <li><a href="gallery">GALLERY</a></li>
                                 <li><a href="news-event.php">NEWS & EVENT</a></li>
                                 <li><a href="index.php#facilities">Facilities</a></li>
                                 <li><a href="about_us.php#message">Message</a></li>
@@ -441,7 +441,7 @@
 	                
 	                <!-- Pure Flexbox Grid layout to enforce 3 items per line perfectly -->
 	                <div class="screenshot-flex-wrapper">
-	                    <div class="grid-item"><a href="index.php#home">Home</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>">Home</a></div>
 	                    <div class="grid-item"><a href="about_us">About Us</a></div>
 	                    <div class="grid-item"><a href="index.php#departmentsSection">Departments</a></div>
 	                    
@@ -454,7 +454,7 @@
 	                    <div class="grid-item"><a href="about_us.php#goal">Our Goal</a></div>
 	                    <div class="grid-item"><a href="news-event.php">News & Event</a></div>
 	                    
-	                    <div class="grid-item"><a href="gallery.php">Gallery</a></div>
+	                    <div class="grid-item"><a href="gallery">Gallery</a></div>
 	                </div>
 	            </div>
 	            
