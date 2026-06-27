@@ -4,8 +4,10 @@
         session_start();
     }
     
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 1);
+
 
     // डेटाबेस कनेक्शन फ़ाइल शामिल करें
     include('config.php'); 

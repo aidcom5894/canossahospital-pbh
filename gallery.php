@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" href="medera/images/cfavicon.png">
-	<title>ProClena - HTML Website Template - About Us Page</title>
+	<title>Canossa Hopital Partapgarh</title>
 	<!-- Vendors -->
 	<link href="proclena/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="proclena/css/vendor/animate.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
             
             <!-- 1. Brand Logo Area -->
             <div class="logo">
-                <a href="index.php">
+                <a href="https://canossahospitalpbh.in/">
                     <img src="medera/images/cfavicon.png" style="height: 50px; width: 210px;">
                 </a>
                 <div class="shine"></div>
@@ -318,7 +318,50 @@ $gallery_query = mysqli_query($conn, "SELECT * FROM ui_gallery ORDER BY id DESC"
 	            max-width: 50% !important;
 	        }
 	    }
+
+	    .filters-by-category .option-set a{
+		    display:inline-block;
+		    padding:10px 20px;
+		    border:2px solid transparent;
+		    border-radius:30px;
+		    transition:.3s;
+		    text-decoration:none;
+		}
+
+		.filters-by-category .option-set a.selected,
+		.filters-by-category .option-set a.active-filter{
+		    border:2px solid #4BA0E8 !important;
+		    color:#4BA0E8 !important;
+		    background:#fff !important;
+		}
+
+		.filters-by-category .option-set a:hover{
+		    border:2px solid #4BA0E8 !important;
+		}
+
+		.filters-by-category .option-set a:focus{
+		    outline:none;
+		    box-shadow:none;
+		}
 	</style>
+
+	<script>
+		$(document).ready(function () {
+
+		    // Filter button click
+		    $('.filters-by-category .option-set a').on('click', function (e) {
+		        e.preventDefault();
+
+		        // Sabse pehle purana active hatao
+		        $('.filters-by-category .option-set a').removeClass('selected active-filter');
+
+		        // Jis par click hua usko active rakho
+		        $(this).addClass('selected active-filter');
+		    });
+
+		});
+	</script>
+
 <!---====== END LIQUID FLEX GRID FOOTER ====== --->
 
 

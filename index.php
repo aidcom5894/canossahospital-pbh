@@ -3,8 +3,8 @@
         session_start();
     }
     
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 1);
 
     include('config.php');
 
@@ -165,7 +165,7 @@
 							<span class="icon-menu"></span>
 						</button>
 						<div class="col-lg-auto col-lg-2 d-flex align-items-lg-center">
-							<a href="index.php" ><img src="img/canossalogo1.png" alt="" style="width:208px; height: 50px;"></a>
+							<a href="https://canossahospitalpbh.in/" ><img src="img/canossalogo1.png" alt="" style="width:208px; height: 50px;"></a>
 						</div>
 						<div class="col-lg ml-auto header-nav-wrap">
 							<div class="header-nav js-header-nav">

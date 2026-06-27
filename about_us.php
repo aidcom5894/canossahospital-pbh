@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" href="medera/images/cfavicon.png">
-	<title>ProClena - HTML Website Template - About Us Page</title>
+	<title>Canossa Hospital Partapgarh</title>
 	<!-- Vendors -->
 	<link href="proclena/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="proclena/css/vendor/animate.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
             
             <!-- 1. Brand Logo Area -->
             <div class="logo">
-                <a href="index.php">
+                <a href="https://canossahospitalpbh.in/">
                     <img src="medera/images/cfavicon.png" style="height: 50px; width: 210px;">
                 </a>
                 <div class="shine"></div>
@@ -112,7 +112,7 @@
 		        <div class="row" style="color:black; margin-bottom: 4rem;">
 		            <div class="col-12">
 		                <div style="width: 100%; text-align: justify; line-height: 1.8;padding: 1rem;">
-		                    <h4 class="mb-3" style="font-weight: 600; color: #333; text-align: left;">More than 250 years of hospital experience</h4>
+		                    <h4 class="mb-3" style="font-weight: 600; color: #333; text-align: left;">More than 85 years of hospital experience</h4>
 		                    
 		                    <p class="mb-3" style="color:black;"><b>Canossa Hospital</b> is situated at Dhahilamau village in Pratapgarh district of Uttar Pradesh. Partapgarh is one of the oldest districts of Uttar Pradesh that came into existence in the year 1858. Of the country's 250 most backward districts, it is one of them.</p>
 
@@ -135,6 +135,14 @@
 		<div class="block" id="mission">
 			<div class="container">
 				<div class="row">
+					<?php
+
+					    // error_reporting(E_ALL);
+					    // ini_set('display_errors', 1);
+
+					    $mv = mysqli_query($conn, " SELECT * FROM ui_mv ");
+					    $row = mysqli_fetch_assoc($mv);
+					?> 
 					<div class="col-sm-6">
 						<div class="text-icon-hor">
 							<div class="text-icon-hor-icon">
@@ -142,13 +150,7 @@
 							</div>
 							<div class="text-icon-hor-text">
 								<h3>Our Mission</h3>
-								<p style="text-align: justify;">"Our mission is to deliver accessible and patient-centered
-								healthcare services with excellence, compassion, and integrity.
-								We are committed to:Serving all people regardless of their 
-								social, economic, or religious background.Promoting health, 
-								venting disease, and improving community well-being.Providing
-								safe, ethical, and high-quality medical care.Supporting the
-								needy through charitable healthcare initiatives.Upholding respect, dignity, and compassion in every patient encounter."</p>
+								<p style="text-align: justify;">"<?php echo $row['about1_mission']; ?>"</p>
 							</div>
 						</div>
 					</div>
@@ -159,7 +161,7 @@
 							</div>
 							<div class="text-icon-hor-text">
 								<h3>Our Vision</h3>
-								<p>"To provide compassionate, affordable, and quality healthcare to all, especially the poor, vulnerable, and underserved communities, promoting dignity, healing, and hope for every person. We strive to build a healthier society by integrating modern medical advancements with deeply rooted ethical values. By focusing on preventive care and community well-being, we aim to ensure that healthcare is not a privilege, but a basic right accessible to everyone."</p>
+								<p>"<?php echo $row['about2_vision']; ?>"</p>
 							</div>
 						</div>
 					</div>
@@ -288,17 +290,25 @@
 		<!-- Objectives Text block -->
 		<div class="block">
 			<div class="container">
+				<?php
+
+				    // error_reporting(E_ALL);
+				    // ini_set('display_errors', 1);
+
+				    $obj = mysqli_query($conn, " SELECT * FROM ui_obj ");
+				    $row = mysqli_fetch_assoc($obj);
+				?> 
 				<div class="row row-flex flex-column-sm align-center">
 					<div class="col-sm-6">
 						<h2>Objectives</h2>
-						<p class="p-lg">The dedicated medical team at Canossa Hospital is committed to providing accessible, high-quality, and compassionate healthcare to all sections of society.</p>
-						<p>Following the holy spirit and charism of St. Magdalene of Canossa, our mission is to heal and comfort the sick with absolute dedication. We continuously strive to bridge the rural healthcare gap in Pratapgarh by offering affordable treatments, expert medical care, and regular community health awareness programs. Driven by trust and selfless service, we ensure that every patient receives treatment rooted in love, dignity, and clinical excellence.</p>
+						<p class="p-lg"><?php echo $row['about1']; ?></p>
+						<p><?php echo $row['about2']; ?></p>
 						<div class="divider"></div>
 						<a href="index.php#contactSection" class="btn animation" data-animation="tada">Contact Our Hospital</a>
 					</div>
 					<div class="col-sm-6">
 						<div class="img-with-shtamp">
-							<img src="img/photo/new7.jpg" class="img-responsive" style="width: 570px;height: 460px; object-fit: cover; overflow: hidden;">
+							<img src="<?php echo $row['avatar']; ?>" class="img-responsive" style="width: 570px;height: 460px; object-fit: cover; overflow: hidden;">
 						</div>
 					</div>
 				</div>
@@ -315,28 +325,36 @@
 					<p class="p-lg">Our ultimate goal is to provide exceptional healing experiences and clinical care to ensure the holistic well-being of our community.</p>
 				</div>
 				<div class="divider"></div>
+					<?php
+
+					    // error_reporting(E_ALL);
+					    // ini_set('display_errors', 1);
+
+					    $fetch = mysqli_query($conn, " SELECT * FROM ui_goal ");
+					    $row = mysqli_fetch_assoc($fetch);
+					?> 
 				<div class="row">
 					<div class="col-md-6">
 						<div class="text-center">
-							<img src="img/photo/new3.jpg" class="img-responsive" style="width: 570px;height: 420px; object-fit: cover; overflow: hidden;">
+							<img src="<?php echo $row['avatar'];?>" class="img-responsive" style="width: 570px;height: 420px; object-fit: cover; overflow: hidden;">
 						</div>
 					</div>
 					<div class="divider-lg visible-sm visible-xs"></div>
 					<div class="col-md-6">
 						<div class="marker-box">
 							<div class="marker-box-marker"><i class="icon-leaf"></i></div>
-							<h4 class="marker-box-title">Patient Oriented</h4>
-							<p>We treat our patients like family. We listen to their needs with empathy and ensure their absolute comfort, safety, and respect during their recovery journey.</p>
+							<h4 class="marker-box-title"><?php echo $row['heading1'];?></h4>
+							<p><?php echo $row['about1'];?></p>
 						</div>
 						<div class="marker-box">
 							<div class="marker-box-marker"><i class="icon-leaf"></i></div>
-							<h4 class="marker-box-title">Affordable Excellence</h4>
-							<p>We deliver modern medical advancements and treatment protocols at costs that are easily affordable for the poor, vulnerable, and underserved families.</p>
+							<h4 class="marker-box-title"><?php echo $row['heading2'];?></h4>
+							<p><?php echo $row['about2'];?></p>
 						</div>
 						<div class="marker-box hidden-md">
 							<div class="marker-box-marker"><i class="icon-leaf"></i></div>
-							<h4 class="marker-box-title">Community Growth</h4>
-							<p>Living up to our identity as 'Mother Hospital', we aim to build long-term trust and healthier generations through active health camps, mobile clinics, and preventive awareness.</p>
+							<h4 class="marker-box-title"><?php echo $row['heading3'];?></h4>
+							<p><?php echo $row['about3'];?></p>
 						</div>
 					</div>
 				</div>

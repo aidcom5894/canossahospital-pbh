@@ -11,7 +11,12 @@
 ?>
 
 
-    
+    <?php
+      // Total users count
+      $countQuery = mysqli_query($conn, "SELECT COUNT(*) AS total FROM user_directory");
+      $countRow = mysqli_fetch_assoc($countQuery);
+      $totalUsers = $countRow['total'] ?? 0;
+    ?>
 
     
   <div class="dashboard-main-body">
@@ -20,12 +25,11 @@
       <ul class="d-flex align-items-center gap-2">
         <li class="fw-medium">
           <a href="user_dashboard.php" class="d-flex align-items-center gap-1 hover-text-primary">
-            <iconify-icon icon="solar:home-smile-angle-outline" class="icon text-lg"></iconify-icon>
             Dashboard
           </a>
         </li>
         <li>-</li>
-        <li class="fw-medium">BizCard</li>
+        <li class="fw-medium"> Canossa Hospital</li>
       </ul>
     </div>
 
@@ -33,30 +37,43 @@
 
 
       <div class="col">
-        <div class="card shadow-none border bg-gradient-start-1 h-100">
-          <div class="card-body p-20">
+          <div class="card shadow-none border bg-gradient-start-1 h-100">
+              <div class="card-body p-20">
 
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-              <div>
-                <p class="fw-medium text-primary-light mb-1">Total Users</p>
-                <h6 class="mb-0"></h6>
+                  <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                      <div>
+
+                          <?php if($totalUsers = 2): ?>
+                              <p class="fw-medium text-primary-light mb-1">First Admin</p>
+
+                          <?php else: ?>
+                              <p class="fw-medium text-primary-light mb-1">Account Limit Full</p>
+                          <?php endif; ?>
+
+                      </div>
+
+                      <div class="w-50-px h-50-px bg-cyan rounded-circle d-flex justify-content-center align-items-center">
+                          <iconify-icon icon="gridicons:multiple-users" class="text-white text-2xl mb-0"></iconify-icon>
+                      </div>
+                  </div>
+
+                  <p class="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
+                      <span class="d-inline-flex align-items-center gap-1 text-success-main">
+                          <iconify-icon icon="bxs:up-arrow" class="text-xs"></iconify-icon>
+                      </span>
+
+                      <?php
+                      if($totalUsers = 2){
+                          echo "1 Admin can also sign up";
+
+                      } else {
+                          echo "2 Admins Registered";
+                      }
+                      ?>
+                  </p>
+
               </div>
-
-              <div class="w-50-px h-50-px bg-cyan rounded-circle d-flex justify-content-center align-items-center">
-                <iconify-icon icon="gridicons:multiple-users" class="text-white text-2xl mb-0"></iconify-icon>
-              </div>
-            </div>
-
-            <p class="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
-              <span class="d-inline-flex align-items-center gap-1 text-success-main">
-                <iconify-icon icon="bxs:up-arrow" class="text-xs"></iconify-icon>
-                +
-              </span>
-              Last 30 days users
-            </p>
-
           </div>
-        </div><!-- FIRST CARD -->
       </div>
 
       <div class="col">

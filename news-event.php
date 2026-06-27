@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" href="medera/images/cfavicon.png">
-	<title>ProClena - HTML Website Template - About Us Page</title>
+	<title>Canossa Hopital Partapgarh</title>
 	<!-- Vendors -->
 	<link href="proclena/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="proclena/css/vendor/animate.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
             
             <!-- 1. Brand Logo Area -->
             <div class="logo">
-                <a href="index.php">
+                <a href="https://canossahospitalpbh.in/">
                     <img src="medera/images/cfavicon.png" style="height: 50px; width: 210px;">
                 </a>
                 <div class="shine"></div>

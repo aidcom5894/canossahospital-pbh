@@ -57,9 +57,7 @@
           <li>
             <a href="ui_dim.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Message-Page</a>
           </li>
-          <li>
-            <a href="ui_news_event.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>News & Event</a>
-          </li>
+
         </ul>
       </li>
 
@@ -80,24 +78,56 @@
 
 
 
-<!--       <li class="dropdown">
+      <li class="dropdown">
         <a href="javascript:void(0)">
-          <iconify-icon icon="simple-line-icons:vector" class="menu-icon"></iconify-icon>
-          <span>Authentication</span>
+          <iconify-icon icon="solar:pen-new-square-outline" class="menu-icon"></iconify-icon>
+          <span>News & Event</span>
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="sign-in.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Sign In</a>
-          </li>
-          <li>
-            <a href="sign-up.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Sign Up</a>
-          </li>
-          <li>
-            <a href="forgot-password.php"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Forgot
-              Password</a>
+            <a href="ui_news_event.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>News & Event:Page</a>
           </li>
         </ul>
-      </li> -->
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)">
+          <iconify-icon icon="solar:user-outline" class="menu-icon"></iconify-icon>
+          <span>Goal</span>
+        </a>
+        <ul class="sidebar-submenu">
+          <li>
+            <a href="ui_goal.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Our Goal-Page</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)">
+          <iconify-icon icon="icon-park-outline:eyes" class="menu-icon"></iconify-icon>
+          <span>Mission & Vision</span>
+        </a>
+        <ul class="sidebar-submenu">
+          <li>
+            <a href="ui_mv.php"><i class="ri-circle-fill circle-icon text-info-500 w-auto"></i>Mission & Vision</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)">
+          <iconify-icon icon="icon-park-outline:square" class="menu-icon"></iconify-icon>
+          <span>Objectives</span>
+        </a>
+        <ul class="sidebar-submenu">
+          <li>
+            <a href="ui_obj.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Objectives-Page</a>
+          </li>
+
+        </ul>
+      </li>
 
 
       <li class="dropdown">

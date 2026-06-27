@@ -4,8 +4,8 @@ header("Cache-Control: no-cache, no-store, must-revalidate");
 // मोबाइल व्यू, रिस्पॉन्सिवनेस और हेडर स्क्रिप्ट्स के लिए आपके डैशबोर्ड हेडर को शामिल करना जरूरी है
 include('user_masterpage/user_dashboard_header.php');
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     // SQL Injection से बचने के लिए ID को सुरक्षित करें

@@ -5,8 +5,8 @@
     include('user_masterpage/user_sidebar.php');
     include('user_masterpage/user_navbar.php');
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 1);
 
     // ID = 1 wale FAQ/About section ko update karne ke liye
     $id = 1; 
