@@ -38,7 +38,7 @@
                 $alertTitle = "Go to login page";
                 $alertText = "Email is already registered!";
                 $alertIcon = "error";
-                $alertRedirect = "sign-in.php";
+                $alertRedirect = "sign-in";
                 $btnColor = "#d33"; // Red button for error
             } 
             elseif ($countQuery->num_rows >= 3) {
@@ -47,7 +47,7 @@
                 $alertTitle = "Limit Reached!";
                 $alertText = "Only Admin is allowed!";
                 $alertIcon = "warning";
-                $alertRedirect = "sign-in.php";
+                $alertRedirect = "sign-in";
                 $btnColor = "#d33"; // Red button for warning
             } 
             else {
@@ -61,7 +61,7 @@
                     $alertTitle = "Welcome!";
                     $alertText = "Your account has been successfully created!";
                     $alertIcon = "success";
-                    $alertRedirect = "sign-in.php";
+                    $alertRedirect = "sign-in";
                     $btnColor = "#3085d6"; 
                 } else {
                     echo "Error: " . mysqli_error($conn);
@@ -267,7 +267,7 @@
             <div class="max-w-464-px mx-auto w-100">
 
                 <div>
-                    <a href="sign-up.php" class="mb-40 max-w-290-px">
+                    <a href="sign-up" class="mb-40 max-w-290-px">
                         <img src="assets/images/logo.png" alt="Image">
                     </a>
                     <h4 class="mb-12">Sign Up to your Account</h4>
@@ -342,7 +342,7 @@
                     <button type="submit" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32" name="submit"> Sign Up</button>
 
                     <div class="mt-32 text-center text-sm">
-                        <p class="mb-0">Already have an account? <a href="sign-in.php" class="text-primary-600 fw-semibold">Sign In</a></p>
+                        <p class="mb-0">Already have an account? <a href="sign-in" class="text-primary-600 fw-semibold">Sign In</a></p>
                     </div>
                     
                 </form>
