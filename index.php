@@ -181,7 +181,7 @@
 		                                        </a>
 		                                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
 		                                            <a class="dropdown-item " href="about_us">About Us</a>
-		                                            <a class="dropdown-item" href="gallery.php">GALLERY</a>
+		                                            <a class="dropdown-item" href="gallery">GALLERY</a>
 		                                            <a class="dropdown-item " href="news-event#readNewevent">NEWS & EVENT</a>
 		                                            <a class="dropdown-item link-inside" href="#facilities">FACILITIES</a>
 		                                            <a class="dropdown-item " href="about_us#message">Message</a>
@@ -1018,7 +1018,7 @@
 
 						    <li class="col-4"><a href="about_us#goal">Our Goal</a></li>
 						    <li class="col-4"><a href="news-event">News & Event</a></li>
-						    <li class="col-4"><a href="#gallery">Gallery</a></li>
+						    <!-- <li class="col-4"><a href="#gallery">Gallery</a></li> -->
 						</ul>
 					</div>
 				</div>
