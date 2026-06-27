@@ -50,9 +50,9 @@
 
                         <li class="active"><a href="#">About Us<span class="arrow"></span></a>
                             <ul class="sub-menu">
-                                <li><a href="about_us">ABOUT US</a></li>
-                                <li><a href="gallery">GALLERY</a></li>
-                                <li><a href="news-event">NEWS & EVENT</a></li>
+                                <li><a href="about_us.php">ABOUT US</a></li>
+                                <li><a href="gallery.php">GALLERY</a></li>
+                                <li><a href="news-event.php">NEWS & EVENT</a></li>
                                 <li><a href="index.php#facilities">Facilities</a></li>
                                 <li><a href="about_us.php#message">Message</a></li>
                             </ul>
@@ -289,9 +289,9 @@
 	                    <div class="grid-item"><a href="index.php#specialistsSection">Team</a></div>
 	                    <div class="grid-item"><a href="index.php#contactSection">Contact Us</a></div>
 	                    <div class="grid-item"><a href="about_us.php#goal">Our Goal</a></div>
-                        <div class="grid-item"><a href="news-event">News & Event</a></div>
+                        <div class="grid-item"><a href="news-event.php">News & Event</a></div>
 	                    
-	                    <div class="grid-item"><a href="gallery">Gallery</a></div>
+	                    <div class="grid-item"><a href="gallery.php">Gallery</a></div>
 	                </div>
 	            </div>
 	            
