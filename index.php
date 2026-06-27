@@ -181,7 +181,7 @@
 		                                        </a>
 		                                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
 		                                            <a class="dropdown-item " href="about_us">About Us</a>
-		                                            <a class="dropdown-item" href="gallery">GALLERY</a>
+		                                            <a class="dropdown-item" href="gallery.php">GALLERY</a>
 		                                            <a class="dropdown-item " href="news-event">NEWS & EVENT</a>
 		                                            <a class="dropdown-item link-inside" href="#facilities">FACILITIES</a>
 		                                            <a class="dropdown-item " href="about_us#message">Message</a>
