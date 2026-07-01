@@ -36,7 +36,7 @@
             
             <!-- 1. Brand Logo Area -->
             <div class="logo">
-                <a href="https://canossahospitalpbh.in/">
+                <a href="<?php echo $base_url; ?>">
                     <img src="medera/images/cfavicon.png" style="height: 50px; width: 210px;">
                 </a>
                 <div class="shine"></div>
@@ -51,17 +51,17 @@
                         <li class="active"><a href="#">About Us<span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="about_us.php">ABOUT US</a></li>
-                                <li><a href="gallery.php">GALLERY</a></li>
+                                <li><a href="Gallery.php">GALLERY</a></li>
                                 <li><a href="news-event.php">NEWS & EVENT</a></li>
-                                <li><a href="index.php#facilities">Facilities</a></li>
+                                <li><a href="<?php echo $base_url; ?>#facilities">Facilities</a></li>
                                 <li><a href="about_us.php#message">Message</a></li>
                             </ul>
                         </li>
-                        <li><a href="index.php#departmentsSection">DEPARTMENT<span class="arrow"></span></a></li>
-                        <li><a href="index.php#servicesSection">SERVICES<span class="arrow"></span></a></li>
-                        <li><a href="index.php#faqSection">FAQ<span class="arrow"></span></a></li>
-                        <li><a href="index.php#specialistsSection">TEAM<span class="arrow"></span></a></li>
-                        <li><a href="index.php#contactSection">CONTACT US<span class="arrow"></span></a></li>
+                        <li><a href="<?php echo $base_url; ?>#departmentsSection">DEPARTMENT<span class="arrow"></span></a></li>
+                        <li><a href="<?php echo $base_url; ?>#servicesSection">SERVICES<span class="arrow"></span></a></li>
+                        <li><a href="<?php echo $base_url; ?>#faqSection">FAQ<span class="arrow"></span></a></li>
+                        <li><a href="<?php echo $base_url; ?>#specialistsSection">TEAM<span class="arrow"></span></a></li>
+                        <li><a href="<?php echo $base_url; ?>#contactSection">CONTACT US<span class="arrow"></span></a></li>
                         <li><a href="sign-in.php">LOGIN<span class="arrow"></span></a></li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
 
             <!-- 3. Mobile Hamburger Menu Toggle Trigger -->
             <div class="page-header-top-right">
-                <a href="index.php#" class="menu-toggle">
+                <a href="<?php echo $base_url; ?>#" class="menu-toggle">
                     <i class="icon-menu"></i><i class="icon-cancel2"></i>
                 </a>
             </div>
@@ -304,7 +304,7 @@
 						<p class="p-lg"><?php echo $row['about1']; ?></p>
 						<p><?php echo $row['about2']; ?></p>
 						<div class="divider"></div>
-						<a href="index.php#contactSection" class="btn animation" data-animation="tada">Contact Our Hospital</a>
+						<a href="<?php echo $base_url; ?>#contactSection" class="btn animation" data-animation="tada">Contact Our Hospital</a>
 					</div>
 					<div class="col-sm-6">
 						<div class="img-with-shtamp">
@@ -442,19 +442,19 @@
 	                <!-- Pure Flexbox Grid layout to enforce 3 items per line perfectly -->
 	                <div class="screenshot-flex-wrapper">
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>">Home</a></div>
-	                    <div class="grid-item"><a href="about_us.php">About Us</a></div>
-	                    <div class="grid-item"><a href="index.php#departmentsSection">Departments</a></div>
+	                    <div class="grid-item"><a href="about_us">About Us</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#departmentsSection">Departments</a></div>
 	                    
-	                    <div class="grid-item"><a href="index.php#facilities">Facilities</a></div>
-	                    <div class="grid-item"><a href="index.php#servicesSection">Service</a></div>
-	                    <div class="grid-item"><a href="index.php#faqSection">Faq</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#facilities">Facilities</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#servicesSection">Service</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#faqSection">Faq</a></div>
 	                    
-	                    <div class="grid-item"><a href="index.php#specialistsSection">Team</a></div>
-	                    <div class="grid-item"><a href="index.php#contactSection">Contact Us</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#specialistsSection">Team</a></div>
+	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#contactSection">Contact Us</a></div>
 	                    <div class="grid-item"><a href="about_us.php#goal">Our Goal</a></div>
 	                    <div class="grid-item"><a href="news-event.php">News & Event</a></div>
 	                    
-	                    <div class="grid-item"><a href="gallery.php">Gallery</a></div>
+	                    <div class="grid-item"><a href="Gallery.php">Gallery</a></div>
 	                </div>
 	            </div>
 	            
@@ -467,7 +467,7 @@
 	            <div class="row align-items-center">
 	                <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
 	                    <div class="footer-copyright" style="color: white; font-size: 14px;">
-	                        Copyright © <?php echo date('Y'); ?> <a href="index.php" style="color: white; text-decoration:none; font-weight: 500;">Canossa Hospital.</a> All rights reserved.
+	                        Copyright © <?php echo date('Y'); ?> <a href="<?php echo $base_url; ?>" style="color: white; text-decoration:none; font-weight: 500;">Canossa Hospital.</a> All rights reserved.
 	                    </div>
 	                </div>
 	                <div class="col-md-6 text-center text-md-right">

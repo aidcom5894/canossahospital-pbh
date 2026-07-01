@@ -2,7 +2,7 @@
     header("Cache-Control: no-cache, no-store, must-revalidate"); 
 
     include('user_masterpage/user_dashboard_header.php');
-    include('user_sidebar.php');
+    include('user_masterpage/user_sidebar.php');
     include('user_masterpage/user_navbar.php');
 
     // error_reporting(E_ALL);
