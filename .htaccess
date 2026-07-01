@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /clinic/
+
+# 1. Browser ke URL se .php ko HIDE aur REDIRECT karne ke liye
+RewriteCond %{THE_REQUEST} \s/clinic/([^\s?]+)\.php[\s?] [NC]
+RewriteRule ^([^\s?]+)\.php$ /clinic/$1 [R=301,L]
+
+# 2. Agar user bina .php ke aaye, toh background mein .php page CHALANE ke liye
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)$ $1.php [L]

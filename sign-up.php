@@ -1,8 +1,8 @@
 <?php 
     include('config.php');
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 1);
 
     // SweetAlert ke liye variables initialize kar rahe hain
     $showAlert = false;
@@ -267,7 +267,7 @@
             <div class="max-w-464-px mx-auto w-100">
 
                 <div>
-                    <a href="sign-up" class="mb-40 max-w-290-px">
+                    <a href="sign-up.php" class="mb-40 max-w-290-px">
                         <img src="assets/images/logo.png" alt="Image">
                     </a>
                     <h4 class="mb-12">Sign Up to your Account</h4>
@@ -342,7 +342,7 @@
                     <button type="submit" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32" name="submit"> Sign Up</button>
 
                     <div class="mt-32 text-center text-sm">
-                        <p class="mb-0">Already have an account? <a href="sign-in" class="text-primary-600 fw-semibold">Sign In</a></p>
+                        <p class="mb-0">Already have an account? <a href="sign-in.php" class="text-primary-600 fw-semibold">Sign In</a></p>
                     </div>
                     
                 </form>
