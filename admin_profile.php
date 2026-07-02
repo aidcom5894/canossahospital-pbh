@@ -94,7 +94,7 @@
                         popup: 'animate__animated animate__fadeOutDown animate__faster'
                     }
                 }).then(() => {
-                    window.location.href = 'admin_profile.php';
+                    window.location.href = 'admin_profile';
                 });
             });
             </script>";
@@ -379,7 +379,7 @@
                                         </div>
 
                                     <div class="d-flex align-items-center justify-content-center gap-3">
-                                        <button type="button" class="btn border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-40 radius-8"onclick="window.location.href='dashboard.php'"> 
+                                        <button type="button" class="btn border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-40 radius-8"onclick="window.location.href='dashboard'"> 
                                             Cancel
                                         </button>
                                         <button type="submit" class="btn btn-primary border border-primary-600 text-md px-40  radius-8"name="update"> 

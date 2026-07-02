@@ -31,10 +31,10 @@
 					</div>
 					<nav class="dropdown-menu dropdown-menu--content" id="moreoptions"> 			
 						<ul>
-							<li><a href="admin_dashboard.php#">More Details</a></li>
-							<li><a href="admin_dashboard.php#">View Report</a></li>
-							<li><a href="admin_dashboard.php#">Edit Settings</a></li>
-							<li><a href="admin_dashboard.php#">+ Add widget</a></li>
+							<li><a href="admin_dashboard#">More Details</a></li>
+							<li><a href="admin_dashboard#">View Report</a></li>
+							<li><a href="admin_dashboard#">Edit Settings</a></li>
+							<li><a href="admin_dashboard#">+ Add widget</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -54,10 +54,10 @@
 						
 						<nav class="dropdown-menu dropdown-menu--content" id="tasksdropdown"> 			
 							<ul>
-								<li><a href="admin_dashboard.php#">More Details</a></li>
-								<li><a href="admin_dashboard.php#">View Activity</a></li>
-								<li><a href="admin_dashboard.php#">Edit Settings</a></li>
-								<li><a href="admin_dashboard.php#">+ Edit widget</a></li>
+								<li><a href="admin_dashboard#">More Details</a></li>
+								<li><a href="admin_dashboard#">View Activity</a></li>
+								<li><a href="admin_dashboard#">Edit Settings</a></li>
+								<li><a href="admin_dashboard#">+ Edit widget</a></li>
 							</ul>
 						</nav>
 						<div class="d-flex align-c">
@@ -82,10 +82,10 @@
 						</div>
 						<nav class="dropdown-menu dropdown-menu--content" id="newpatientsdropdown"> 			
 							<ul>
-								<li><a href="admin_dashboard.php#">More Details</a></li>
-								<li><a href="admin_dashboard.php#">View Patients</a></li>
-								<li><a href="admin_dashboard.php#">Edit Settings</a></li>
-								<li><a href="admin_dashboard.php#">+ Edit widget</a></li>
+								<li><a href="admin_dashboard#">More Details</a></li>
+								<li><a href="admin_dashboard#">View Patients</a></li>
+								<li><a href="admin_dashboard#">Edit Settings</a></li>
+								<li><a href="admin_dashboard#">+ Edit widget</a></li>
 							</ul>
 						</nav>
 						<div class="d-flex align-c">
@@ -110,10 +110,10 @@
 						</div>
 						<nav class="dropdown-menu dropdown-menu--content" id="alertdropdown"> 			
 							<ul>
-								<li><a href="admin_dashboard.php#">More Details</a></li>
-								<li><a href="admin_dashboard.php#">View Alerts</a></li>
-								<li><a href="admin_dashboard.php#">Edit Settings</a></li>
-								<li><a href="admin_dashboard.php#">+ Edit widget</a></li>
+								<li><a href="admin_dashboard#">More Details</a></li>
+								<li><a href="admin_dashboard#">View Alerts</a></li>
+								<li><a href="admin_dashboard#">Edit Settings</a></li>
+								<li><a href="admin_dashboard#">+ Edit widget</a></li>
 							</ul>
 						</nav>
 						<div class="d-flex align-c">

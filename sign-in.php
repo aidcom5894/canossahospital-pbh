@@ -31,7 +31,7 @@
                 $alertTitle = "Login Successful!";
                 $alertText = "Welcome to Dashboard!";
                 $alertIcon = "success";
-                $alertRedirect = "user_dashboard.php";
+                $alertRedirect = "user_dashboard";
                 $btnColor = "#3085d6"; // Blue for success
             } else {
                 // Invalid Password Configuration
@@ -39,7 +39,7 @@
                 $alertTitle = "Invalid Password!";
                 $alertText = "Please enter correct password!";
                 $alertIcon = "error";
-                $alertRedirect = "sign-in.php";
+                $alertRedirect = "sign-in";
             }
         } else {
             // Invalid Email Configuration
@@ -47,7 +47,7 @@
             $alertTitle = "Invalid Email!";
             $alertText = "Email not found in system!";
             $alertIcon = "error";
-            $alertRedirect = "sign-in.php";
+            $alertRedirect = "sign-in";
         }
     }
 ?>
@@ -251,7 +251,7 @@
     <div class="auth-right py-32 px-24 d-flex flex-column justify-content-center">
         <div class="max-w-464-px mx-auto w-100">
             <div>
-                <a href="sign-in.php" class="mb-40 max-w-290-px">
+                <a href="sign-in" class="mb-40 max-w-290-px">
                     <img src="assets/images/logo.png" alt="Image">
                 </a>
                 <h4 class="mb-12">Sign In to your Account</h4>
@@ -277,14 +277,14 @@
                             <input class="form-check-input border border-neutral-300" type="checkbox" value="" id="remeber" required>
                             <label class="form-check-label" for="remeber" >Remember me </label>
                         </div>
-                        <a href="forgot-password.php" class="text-primary-600 fw-medium">Forgot Password?</a>
+                        <a href="forgot-password" class="text-primary-600 fw-medium">Forgot Password?</a>
                     </div>
                 </div>
 
                 <button type="submit" name="submit" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32"> Sign In</button>
 
                 <div class="mt-32 text-center text-sm">
-                    <p class="mb-0">Don’t have an account? <a href="sign-up.php" class="text-primary-600 fw-semibold">Sign Up</a></p>
+                    <p class="mb-0">Don’t have an account? <a href="sign-up" class="text-primary-600 fw-semibold">Sign Up</a></p>
                 </div>
                 
             </form>

@@ -10,7 +10,7 @@
     session_start();
     
     if (!isset($_SESSION['user'])) {
-        header("Location: sign-in.php");
+        header("Location: sign-in");
         exit();
     }
 
@@ -18,6 +18,6 @@
     unset($_SESSION['user']);
     session_unset();
 
-    header("Location: sign-in.php");
+    header("Location: sign-in");
     exit(); 
 ?>

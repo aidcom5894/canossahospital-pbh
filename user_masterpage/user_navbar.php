@@ -98,7 +98,7 @@
                             $senderImage = (!empty($row['sender_avatar'])) ? $row['sender_avatar'] : "medikit/images/default-avatar.png";
                     ?>
                       
-                        <a href="read-notification.php?id=<?= $row['id']; ?>" class="px-24 py-12 d-flex align-items-start justify-content-between gap-3 border-bottom">
+                        <a href="read-notification?id=<?= $row['id']; ?>" class="px-24 py-12 d-flex align-items-start justify-content-between gap-3 border-bottom">
                             <!-- 🔹 LEFT SIDE -->
                             <div class="d-flex align-items-center gap-3 flex-grow-1">
                                 <img src="<?= htmlspecialchars($senderImage); ?>" alt="profile" class="w-50-px h-50-px rounded flex-shrink-0">
@@ -124,7 +124,7 @@
                 <!-- ===== Footer ===== -->
                 <?php if($totalNotification > 5): ?>
                     <div class="text-center py-12 px-16">
-                        <a href="all_notification.php" class="text-primary-600 fw-semibold text-md">See All Notifications</a>
+                        <a href="all_notification" class="text-primary-600 fw-semibold text-md">See All Notifications</a>
                     </div>
                 <?php endif; ?>
               </div>
@@ -162,17 +162,17 @@
                 </div>
                 <ul class="to-top-list">
                   <li>
-                    <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="profile.php">
+                    <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="profile">
                       <iconify-icon icon="solar:user-linear" class="icon text-xl"></iconify-icon> My Profile
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="all_notification.php">
+                    <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="all_notification">
                       <iconify-icon icon="tabler:message-check" class="icon text-xl"></iconify-icon> Inbox
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3" href="logout.php">
+                    <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3" href="logout">
                       <iconify-icon icon="lucide:power" class="icon text-xl"></iconify-icon> Log Out
                     </a>
                   </li>

@@ -10,7 +10,7 @@
 
     // 1. पहले चेक करें कि URL में ID है या नहीं
     if (!isset($_GET['id']) || empty($_GET['id'])) {
-        echo "<script>window.location.href = 'ui_faci.php';</script>";
+        echo "<script>window.location.href = 'ui_faci';</script>";
         exit();
     }
     
@@ -24,7 +24,7 @@
     // अगर ID गलत है या डेटाबेस में वो रिकॉर्ड नहीं है
     if (!$row) {
         echo "<div class='alert alert-danger m-3'>Record not found for ID: " . htmlspecialchars($edit_id) . "</div>";
-        echo "<script>setTimeout(function(){ window.location.href = 'ui_faci.php'; }, 2000);</script>";
+        echo "<script>setTimeout(function(){ window.location.href = 'ui_faci'; }, 2000);</script>";
         exit();
     }
 
@@ -90,7 +90,7 @@
             $alertTitle    = "Success!";
             $alertText     = "Team member updated successfully!";
             $alertIcon     = "success";
-            $alertRedirect = "ui_edit-faci.php"; 
+            $alertRedirect = "ui_edit-faci"; 
             $btnColor      = "#0284c7";
             $btnText       = "Ok";
         }
@@ -186,7 +186,7 @@
                                 </div>
 
                                 <div class="custom-btn-group">
-                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='ui_edit-faci.php'"> Cancel </button>
+                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='ui_edit-faci'"> Cancel </button>
                                     <button type="submit" class="btn btn-success custom-wide-btn" name="update"> Submit </button>
                                 </div>
 

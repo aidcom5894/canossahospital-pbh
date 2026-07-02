@@ -30,7 +30,7 @@
                     titleText: 'Notification Sent Successfully!',
                     icon: 'success'
                 }).then(() => {
-                    window.location.href='admin_notification.php';
+                    window.location.href='admin_notification';
                 });
             </script>";
             exit;

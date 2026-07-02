@@ -27,7 +27,7 @@
                 $alertTitle = "Password Updated!";
                 $alertText = "Now Login with your new password!";
                 $alertIcon = "success";
-                $alertRedirect = "sign-in.php"; 
+                $alertRedirect = "sign-in"; 
                 $btnColor = "#4e73df";
             } else {
                 $showAlert = true;
@@ -42,7 +42,7 @@
             $alertTitle = "Error!";
             $alertText = "Invalid or expired session. Please request password reset again.";
             $alertIcon = "error";
-            $alertRedirect = "forgot_password.php"; 
+            $alertRedirect = "forgot_password"; 
             $btnColor = "#d33";
         }
     }
@@ -114,7 +114,7 @@
             <h4 class="mb-12">Create New Password</h4>
             <p class="mb-32 text-secondary-light">Please enter a strong password for your account.</p>
             
-            <form method="POST" action="reset_password.php?email=<?php echo urlencode($Email); ?>" autocomplete="off">
+            <form method="POST" action="reset_password?email=<?php echo urlencode($Email); ?>" autocomplete="off">
                 <div class="position-relative mb-16">
                     <div class="icon-field"> 
                         <input type="password" name="password" class="form-control h-56-px radius-12" placeholder="Set new Password" minlength="8" id="your-password" autocomplete="new-password" required>

@@ -3,7 +3,7 @@
     <iconify-icon icon="radix-icons:cross-2"></iconify-icon>
   </button>
   <div>
-    <a href="user_dashboard.php" class="sidebar-logo">
+    <a href="user_dashboard" class="sidebar-logo">
       <img src="medera/images/cfavicon.png" alt="site logo" class="light-logo">
       <img src="medera/images/cfavicon.png" alt="site logo" class="dark-logo">
     </a>
@@ -14,7 +14,7 @@
     <ul class="sidebar-menu" id="sidebar-menu">
 
       <li class="dropdown">
-        <a href="user_dashboard.php">
+        <a href="user_dashboard">
           <iconify-icon icon="solar:home-smile-angle-outline" class="menu-icon"></iconify-icon>
           <span>Dashboard</span>
         </a>
@@ -28,34 +28,34 @@
         </a>
         <ul class="sidebar-submenu">
             <li>
-            <a href="ui_home.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Home-Page</a>
+            <a href="ui_home"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Home-Page</a>
           </li>
           <li>
-            <a href="ui_about.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Video-Page</a>
+            <a href="ui_about"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Video-Page</a>
           </li>
           <li>
-            <a href="ui_contact.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Contact-Page</a>
+            <a href="ui_contact"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Contact-Page</a>
           </li>
           <li>
-            <a href="ui_appointment.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Appointment-Page</a>
+            <a href="ui_appointment"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Appointment-Page</a>
           </li>
           <li>
-            <a href="ui_team.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Team-Page</a>
+            <a href="ui_team"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Team-Page</a>
           </li>
           <li>
-            <a href="ui_faq.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Faq-Page</a>
+            <a href="ui_faq"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Faq-Page</a>
           </li>
           <li>
-            <a href="ui_service.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Service-Page</a>
+            <a href="ui_service"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Service-Page</a>
           </li>
           <li>
-            <a href="ui_why.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Choose_Us-Page</a>
+            <a href="ui_why"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Choose_Us-Page</a>
           </li>
           <li>
-            <a href="ui_faci.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Facilities-Page</a>
+            <a href="ui_faci"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Facilities-Page</a>
           </li>
           <li>
-            <a href="ui_dim.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Message-Page</a>
+            <a href="ui_dim"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Message-Page</a>
           </li>
 
         </ul>
@@ -70,7 +70,7 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="ui_gallery.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Gallery</a>
+            <a href="ui_gallery"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Gallery</a>
           </li>
 
         </ul>
@@ -85,7 +85,7 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="ui_news_event.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>News & Event:Page</a>
+            <a href="ui_news_event"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>News & Event:Page</a>
           </li>
         </ul>
       </li>
@@ -97,7 +97,7 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="ui_goal.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Our Goal-Page</a>
+            <a href="ui_goal"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Our Goal-Page</a>
           </li>
 
         </ul>
@@ -110,7 +110,7 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="ui_mv.php"><i class="ri-circle-fill circle-icon text-info-500 w-auto"></i>Mission & Vision</a>
+            <a href="ui_mv"><i class="ri-circle-fill circle-icon text-info-500 w-auto"></i>Mission & Vision</a>
           </li>
 
         </ul>
@@ -123,7 +123,7 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="ui_obj.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Objectives-Page</a>
+            <a href="ui_obj"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Objectives-Page</a>
           </li>
 
         </ul>
@@ -137,14 +137,14 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="forgot-password.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Forgot-password</a>
+            <a href="forgot-password"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Forgot-password</a>
           </li>
 
           <li>
-            <a href="delete-account.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Delete Account</a>
+            <a href="delete-account"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Delete Account</a>
           </li>
           <li>
-            <a href="logout.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Logout</a>
+            <a href="logout"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i>Logout</a>
           </li>
         </ul>
       </li>

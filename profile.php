@@ -74,7 +74,7 @@
             $alertTitle = "Success!";
             $alertText = "Profile updated successfully!";
             $alertIcon = "success";
-            $alertRedirect = "profile.php"; // Same page par reload ya dashboard par bhejein
+            $alertRedirect = "profile"; // Same page par reload ya dashboard par bhejein
             $btnColor = "#3085d6";
             $btnText = "Ok";
         }
@@ -237,7 +237,7 @@
                                     </div>
 
                                     <div class="d-flex align-items-center justify-content-center gap-3">
-                                        <button type="button" class="btn border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-40 radius-8" onclick="window.location.href='user_dashboard.php'">Cancel</button>
+                                        <button type="button" class="btn border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-40 radius-8" onclick="window.location.href='user_dashboard'">Cancel</button>
                                         <button type="submit" class="btn btn-primary border border-primary-600 text-md px-40 radius-8" name="update">Save</button>
                                     </div>
                                 </form>

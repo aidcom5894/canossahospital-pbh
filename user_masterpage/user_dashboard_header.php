@@ -9,7 +9,7 @@
 
   // Agar user session mein nahi hai to sign-in par bhej do
   if (!isset($_SESSION['user'])) {
-      header("Location: sign-in.php");
+      header("Location: sign-in");
       exit();
   }
 

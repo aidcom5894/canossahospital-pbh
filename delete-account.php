@@ -4,7 +4,7 @@ session_start();
 include('config.php'); 
 
 if (!isset($_SESSION['user'])) {
-    header("Location: sign-in.php");
+    header("Location: sign-in");
     exit;
 }
 
@@ -44,7 +44,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'confirm_delete') {
                 icon: 'success',
                 confirmButtonColor: '#d33'
             }).then(() => {
-                window.location.href = 'sign-in.php'; 
+                window.location.href = 'sign-in'; 
             });
         });
         </script>
@@ -96,9 +96,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'confirm_delete') {
             cancelButtonText: 'Cancel'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = 'delete-account.php?action=confirm_delete';
+                window.location.href = 'delete-account?action=confirm_delete';
             } else {
-                window.location.href = 'dashboard.php';
+                window.location.href = 'dashboard';
             }
         });
     });

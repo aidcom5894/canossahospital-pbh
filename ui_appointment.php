@@ -54,7 +54,7 @@
             $alertTitle = "Success!";
             $alertText = "Appointment data updated successfully!";
             $alertIcon = "success";
-            $alertRedirect = "ui_appointment.php"; 
+            $alertRedirect = "ui_appointment"; 
             $btnColor = "#3085d6";
             $btnText = "Ok";
         }
@@ -182,7 +182,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="custom-btn-group">
-                                            <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard.php'"> Cancel </button>
+                                            <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard'"> Cancel </button>
                                             <button type="submit" class="btn btn-success custom-wide-btn" name="appointment"> Submit </button>
                                         </div>
                                     </div>

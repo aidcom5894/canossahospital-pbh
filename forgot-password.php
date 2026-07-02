@@ -117,7 +117,7 @@
                         $alertTitle = "OTP Sent!";
                         $alertText = "Check your email for the verification code. (Attempt $new_count of 3)";
                         $alertIcon = "success";
-                        $alertRedirect = "verify_otp.php?email=" . urlencode($Email);
+                        $alertRedirect = "verify_otp?email=" . urlencode($Email);
                         $btnColor = "#4e73df";
                     }
 
@@ -258,11 +258,11 @@
                     <button type="submit" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32" name="send_otp">Send OTP</button>
 
                     <div class="text-center">
-                        <a href="sign-in.php" class="text-primary-600 fw-bold mt-24 d-inline-block">Back to Sign In</a>
+                        <a href="sign-in" class="text-primary-600 fw-bold mt-24 d-inline-block">Back to Sign In</a>
                     </div>
                     
                     <div class="mt-120 text-center text-sm">
-                        <p class="mb-0">Already have an account? <a href="sign-in.php" class="text-primary-600 fw-semibold">Sign In</a></p>
+                        <p class="mb-0">Already have an account? <a href="sign-in" class="text-primary-600 fw-semibold">Sign In</a></p>
                     </div>
                 </form>
             </div>
