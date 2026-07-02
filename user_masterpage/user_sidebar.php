@@ -62,6 +62,20 @@
       </li>
 
 
+    <!-- 
+          <li class="dropdown">
+            <a href="javascript:void(0)">
+              <iconify-icon icon="solar:gallery-wide-linear" class="menu-icon"></iconify-icon>
+              <span>Gallery</span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="ui_gallery"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Gallery</a>
+              </li>
+
+            </ul>
+          </li> -->
+
 
       <li class="dropdown">
         <a href="javascript:void(0)">
@@ -75,8 +89,6 @@
 
         </ul>
       </li>
-
-
 
       <li class="dropdown">
         <a href="javascript:void(0)">
