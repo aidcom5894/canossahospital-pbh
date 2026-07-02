@@ -29,11 +29,11 @@
 									<nav class="dropdown-menu dropdown-menu--header dropdown-menu--user-menu " id="userdropdown" > 	
 									<h3 class="dropdown-menu__subtitle" >Admin menu</h3>
 									<ul>   
-									    <li><a href="admin_profile.php">My profile</a></li>
-									    <li><a href="admin_dashboard.php#">Activity</a></li>
-									    <li><a href="admin_sign-in.php#">Switch account</a></li>
-									    <li><a href="admin_dashboard.php#">Support</a></li>
-									    <li class="logout"><a href="admin_logout.php" class="button button--general button--red-border">Logout</a></li>
+									    <li><a href="admin_profile">My profile</a></li>
+									    <li><a href="admin_dashboard#">Activity</a></li>
+									    <li><a href="admin_sign-in#">Switch account</a></li>
+									    <li><a href="admin_dashboard#">Support</a></li>
+									    <li class="logout"><a href="admin_logout" class="button button--general button--red-border">Logout</a></li>
 									</ul>
 								</nav>
 						</div>

@@ -62,7 +62,7 @@
             $alertTitle = "Success!";
             $alertText = "FAQ updated successfully!";
             $alertIcon = "success";
-            $alertRedirect = "ui_faq.php"; 
+            $alertRedirect = "ui_faq"; 
             $btnColor = "#3085d6";
             $btnText = "Continue";
         }
@@ -195,7 +195,7 @@
                                 </div>
 
                                 <div class="custom-btn-group">
-                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard.php'">
+                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard'">
                                         <iconify-icon icon="material-symbols:close" class="me-1"></iconify-icon> Cancel
                                     </button>
                                     <button type="submit" class="btn btn-success custom-wide-btn" name="update_faq">

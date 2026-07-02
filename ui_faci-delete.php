@@ -35,7 +35,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $delete = mysqli_query($conn, $deleteQuery);
 
     if ($delete) {
-        // ठीक उसी तरह का बड़ा और परफेक्ट SweetAlert जैसा आपके ui_faci.php के सबमिट में था
+        // ठीक उसी तरह का बड़ा और परफेक्ट SweetAlert जैसा आपके ui_faci के सबमिट में था
         echo "
         <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
         <script>
@@ -50,18 +50,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     timer: 2500,
                     timerProgressBar: true
                 }).then((result) => {
-                    window.location.href = 'ui_faci.php';
+                    window.location.href = 'ui_faci';
                 });
             });
         </script>";
         exit();
     } else {
-        echo "<script>alert('Error deleting record: " . mysqli_error($conn) . "'); window.location.href='ui_faci.php';</script>";
+        echo "<script>alert('Error deleting record: " . mysqli_error($conn) . "'); window.location.href='ui_faci';</script>";
         exit();
     }
 } else {
     // अगर बिना ID के कोई आए तो वापस भेजें
-    header("Location: ui_faci.php");
+    header("Location: ui_faci");
     exit();
 }
 ?>

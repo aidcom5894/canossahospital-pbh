@@ -50,11 +50,11 @@
 
                         <li class="active"><a href="#">About Us<span class="arrow"></span></a>
                             <ul class="sub-menu">
-                                <li><a href="about_us.php">ABOUT US</a></li>
-                                <li><a href="Gallery.php">GALLERY</a></li>
-                                <li><a href="news-event.php">NEWS & EVENT</a></li>
+                                <li><a href="about_us">ABOUT US</a></li>
+                                <li><a href="Gallery">GALLERY</a></li>
+                                <li><a href="news-event">NEWS & EVENT</a></li>
                                 <li><a href="<?php echo $base_url; ?>#facilities">Facilities</a></li>
-                                <li><a href="about_us.php#message">Message</a></li>
+                                <li><a href="about_us#message">Message</a></li>
                             </ul>
                         </li>
                         <li><a href="<?php echo $base_url; ?>#departmentsSection">DEPARTMENT<span class="arrow"></span></a></li>
@@ -62,7 +62,7 @@
                         <li><a href="<?php echo $base_url; ?>#faqSection">FAQ<span class="arrow"></span></a></li>
                         <li><a href="<?php echo $base_url; ?>#specialistsSection">TEAM<span class="arrow"></span></a></li>
                         <li><a href="<?php echo $base_url; ?>#contactSection">CONTACT US<span class="arrow"></span></a></li>
-                        <li><a href="sign-in.php">LOGIN<span class="arrow"></span></a></li>
+                        <li><a href="sign-in">LOGIN<span class="arrow"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -84,7 +84,7 @@
 		<div class="block breadcrumbs">
 			<div class="container">
 				<ul class="breadcrumb">
-					<li><a href="news-event.php">Home</a></li>
+					<li><a href="news-event">Home</a></li>
 					<li>News & Event</li>
 				</ul>
 			</div>
@@ -164,14 +164,14 @@
 	                </div>
 	                
 	                <div class="text-center" style="margin-top: 30px;">
-	                    <a href="news-event.php" class="btn btn-hover-fill" style="background-color: #5C6895; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View All News & Events</a>
+	                    <a href="news-event" class="btn btn-hover-fill" style="background-color: #5C6895; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View All News & Events</a>
 	                </div>
 	            </div>
 	        </div>
 	<?php
 	    } else {
 	        // अगर कोई गलत ID डाल दे URL में तो वापस रीडायरेक्ट या मैसेज दिखाएं
-	        echo "<div class='block text-center'><h3>Event not found!</h3><a href='news-event.php' style='color:#5C6895;'>Go Back</a></div>";
+	        echo "<div class='block text-center'><h3>Event not found!</h3><a href='news-event' style='color:#5C6895;'>Go Back</a></div>";
 	    }
 
 	} else { 
@@ -199,7 +199,7 @@
 	                    <div class="col-sm-6 col-md-4" style="margin-bottom: 30px;">
 	                        <div class="news-prw">
 	                            <div class="news-prw-image">
-	                                <a href="news-event.php?id=<?php echo $Id; ?>">
+	                                <a href="news-event?id=<?php echo $Id; ?>">
 	                                    <img src="<?php echo $Avatar; ?>" alt="<?php echo $Title; ?>" style="width: 370px !important; height: 249px !important; object-fit: cover; overflow: hidden;">
 	                                    <span><i class="icon-link"></i></span>
 	                                </a>
@@ -211,7 +211,7 @@
 	                            <p style="text-align: justify !important; min-height: 65px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
 	                                <?php echo (mb_strlen($Description) > 100) ? mb_substr($Description, 0, 100).'...' : $Description; ?>
 	                            </p>
-	                            <a href="news-event.php?id=<?php echo $Id; ?>" class="btn-read-more"><i class="icon-play"></i>Read more</a>
+	                            <a href="news-event?id=<?php echo $Id; ?>" class="btn-read-more"><i class="icon-play"></i>Read more</a>
 	                        </div>
 	                    </div>
 
@@ -279,7 +279,7 @@
 	                <!-- Pure Flexbox Grid layout to enforce 3 items per line perfectly -->
 	                <div class="screenshot-flex-wrapper">
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>">Home</a></div>
-	                    <div class="grid-item"><a href="about_us.php">About Us</a></div>
+	                    <div class="grid-item"><a href="about_us">About Us</a></div>
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#departmentsSection">Departments</a></div>
 	                    
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#facilities">Facilities</a></div>
@@ -288,10 +288,10 @@
 	                    
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#specialistsSection">Team</a></div>
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#contactSection">Contact Us</a></div>
-	                    <div class="grid-item"><a href="about_us.php#goal">Our Goal</a></div>
-                        <div class="grid-item"><a href="news-event.php">News & Event</a></div>
+	                    <div class="grid-item"><a href="about_us#goal">Our Goal</a></div>
+                        <div class="grid-item"><a href="news-event">News & Event</a></div>
 	                    
-	                    <div class="grid-item"><a href="Gallery.php">Gallery</a></div>
+	                    <div class="grid-item"><a href="Gallery">Gallery</a></div>
 	                </div>
 	            </div>
 	            

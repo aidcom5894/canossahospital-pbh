@@ -36,7 +36,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $delete = mysqli_query($conn, $deleteQuery);
 
     if ($delete) {
-        // ठीक उसी तरह का बड़ा और परफेक्ट SweetAlert जैसा आपके news_events.php के सबमिट में था
+        // ठीक उसी तरह का बड़ा और परफेक्ट SweetAlert जैसा आपके news_events के सबमिट में था
         echo "
         <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
         <script>
@@ -51,18 +51,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     timer: 2500,
                     timerProgressBar: true
                 }).then((result) => {
-                    window.location.href = 'ui_news_event.php';
+                    window.location.href = 'ui_news_event';
                 });
             });
         </script>";
         exit();
     } else {
-        echo "<script>alert('Error deleting record: " . mysqli_error($conn) . "'); window.location.href='ui_news_event.php';</script>";
+        echo "<script>alert('Error deleting record: " . mysqli_error($conn) . "'); window.location.href='ui_news_event';</script>";
         exit();
     }
 } else {
     // अगर बिना ID के कोई आए तो वापस भेजें
-    header("Location: ui_news_event.php");
+    header("Location: ui_news_event");
     exit();
 }
 ?>

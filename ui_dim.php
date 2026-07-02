@@ -73,7 +73,7 @@
                 $alertTitle    = "Success!";
                 $alertText     = "Team member added successfully!";
                 $alertIcon     = "success";
-                $alertRedirect = "ui_dim.php"; 
+                $alertRedirect = "ui_dim"; 
                 $btnColor      = "#0284c7";
                 $btnText       = "Ok";
             }
@@ -375,11 +375,11 @@
                 </div>
                 <div class="content-subheader__options">
                     <div class="content-subheader__search">
-                        <form method="GET" action="ui_dim.php">
+                        <form method="GET" action="ui_dim">
                             <input type="text" name="search" class="subheader-search__input" placeholder="Search data..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" />
                             <input type="submit" class="subheader-search__submit" value="Search" />
                             <?php if(!empty($search_query)): ?>
-                                <a href="ui_dim.php" class="search-clear-btn">Clear</a>
+                                <a href="ui_dim" class="search-clear-btn">Clear</a>
                             <?php endif; ?>
                         </form>
                     </div>
@@ -488,16 +488,16 @@
                                 $search_param = isset($_GET['search']) ? "&search=" . urlencode($_GET['search']) : "";
 
                                 if($page > 1) {
-                                    echo '<li><a href="ui_dim.php?page='.($page - 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">PREV</a></li>';
+                                    echo '<li><a href="ui_dim?page='.($page - 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">PREV</a></li>';
                                 }
 
                                 for($i = 1; $i <= $total_pages; $i++) {
                                     $active_class = ($i == $page) ? 'style="padding: 8px 12px; border: 1px solid #007bff; background: #007bff; color: #fff; text-decoration: none; font-weight: bold; display: inline-block; border-radius: 4px;"' : 'style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;"';
-                                    echo '<li><a href="ui_dim.php?page='.$i.$search_param.'" '.$active_class.'>'.$i.'</a></li>';
+                                    echo '<li><a href="ui_dim?page='.$i.$search_param.'" '.$active_class.'>'.$i.'</a></li>';
                                 }
 
                                 if($page < $total_pages) {
-                                    echo '<li><a href="ui_dim.php?page='.($page + 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">NEXT</a></li>';
+                                    echo '<li><a href="ui_dim?page='.($page + 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">NEXT</a></li>';
                                 }
                             ?>
                         </ul>
@@ -514,7 +514,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title text-xl mb-0" id="addTaskModalLabel">Add New Team Data</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="window.location.href='ui_dim.php'"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="window.location.href='ui_dim'"></button>
                 </div>
                 <div class="modal-body">
                     <form id="taskForm" method="POST" enctype="multipart/form-data" autocomplete="off">
@@ -589,7 +589,7 @@
                 cancelButtonText: 'No, cancel'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'ui_dim-delete.php?id=' + id;
+                    window.location.href = 'ui_dim-delete?id=' + id;
                 }
             });
         }
@@ -606,7 +606,7 @@
                 cancelButtonText: 'No, Discard'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'ui_edit-dim.php?id=' + id;
+                    window.location.href = 'ui_edit-dim?id=' + id;
                 }
             });
         }

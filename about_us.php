@@ -50,11 +50,11 @@
 
                         <li class="active"><a href="#">About Us<span class="arrow"></span></a>
                             <ul class="sub-menu">
-                                <li><a href="about_us.php">ABOUT US</a></li>
-                                <li><a href="Gallery.php">GALLERY</a></li>
-                                <li><a href="news-event.php">NEWS & EVENT</a></li>
+                                <li><a href="about_us">ABOUT US</a></li>
+                                <li><a href="Gallery">GALLERY</a></li>
+                                <li><a href="news-event">NEWS & EVENT</a></li>
                                 <li><a href="<?php echo $base_url; ?>#facilities">Facilities</a></li>
-                                <li><a href="about_us.php#message">Message</a></li>
+                                <li><a href="about_us#message">Message</a></li>
                             </ul>
                         </li>
                         <li><a href="<?php echo $base_url; ?>#departmentsSection">DEPARTMENT<span class="arrow"></span></a></li>
@@ -62,7 +62,7 @@
                         <li><a href="<?php echo $base_url; ?>#faqSection">FAQ<span class="arrow"></span></a></li>
                         <li><a href="<?php echo $base_url; ?>#specialistsSection">TEAM<span class="arrow"></span></a></li>
                         <li><a href="<?php echo $base_url; ?>#contactSection">CONTACT US<span class="arrow"></span></a></li>
-                        <li><a href="sign-in.php">LOGIN<span class="arrow"></span></a></li>
+                        <li><a href="sign-in">LOGIN<span class="arrow"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -84,7 +84,7 @@
 		<div class="block breadcrumbs">
 			<div class="container">
 				<ul class="breadcrumb">
-					<li><a href="about_us.php">Home</a></li>
+					<li><a href="about_us">Home</a></li>
 					<li>About Us</li>
 				</ul>
 			</div>
@@ -451,10 +451,10 @@
 	                    
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#specialistsSection">Team</a></div>
 	                    <div class="grid-item"><a href="<?php echo $base_url; ?>#contactSection">Contact Us</a></div>
-	                    <div class="grid-item"><a href="about_us.php#goal">Our Goal</a></div>
-	                    <div class="grid-item"><a href="news-event.php">News & Event</a></div>
+	                    <div class="grid-item"><a href="about_us#goal">Our Goal</a></div>
+	                    <div class="grid-item"><a href="news-event">News & Event</a></div>
 	                    
-	                    <div class="grid-item"><a href="Gallery.php">Gallery</a></div>
+	                    <div class="grid-item"><a href="Gallery">Gallery</a></div>
 	                </div>
 	            </div>
 	            

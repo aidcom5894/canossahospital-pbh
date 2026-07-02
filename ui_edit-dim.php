@@ -10,7 +10,7 @@
 
     // 1. पहले चेक करें कि URL में ID है या नहीं
     if (!isset($_GET['id']) || empty($_GET['id'])) {
-        echo "<script>window.location.href = 'ui_dim.php';</script>";
+        echo "<script>window.location.href = 'ui_dim';</script>";
         exit();
     }
     
@@ -24,7 +24,7 @@
     // अगर ID गलत है या डेटाबेस में वो रिकॉर्ड नहीं है
     if (!$row) {
         echo "<div class='alert alert-danger m-3'>Record not found for ID: " . htmlspecialchars($edit_id) . "</div>";
-        echo "<script>setTimeout(function(){ window.location.href = 'ui_dim.php'; }, 2000);</script>";
+        echo "<script>setTimeout(function(){ window.location.href = 'ui_dim'; }, 2000);</script>";
         exit();
     }
 
@@ -91,7 +91,7 @@
             $alertTitle    = "Success!";
             $alertText     = "Message updated successfully!";
             $alertIcon     = "success";
-            $alertRedirect = "ui_dim.php"; 
+            $alertRedirect = "ui_dim"; 
             $btnColor      = "#0284c7";
             $btnText       = "Ok";
         }
@@ -205,7 +205,7 @@
 
                                 <!-- Action Buttons -->
                                 <div class="custom-btn-group">
-                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='ui_dim.php'"> Cancel </button>
+                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='ui_dim'"> Cancel </button>
                                     <button type="submit" class="btn btn-success custom-wide-btn" name="update"> Submit </button>
                                 </div>
 

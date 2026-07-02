@@ -24,7 +24,7 @@
       <h6 class="fw-semibold mb-0">Dashboard</h6>
       <ul class="d-flex align-items-center gap-2">
         <li class="fw-medium">
-          <a href="user_dashboard.php" class="d-flex align-items-center gap-1 hover-text-primary">
+          <a href="user_dashboard" class="d-flex align-items-center gap-1 hover-text-primary">
             Dashboard
           </a>
         </li>

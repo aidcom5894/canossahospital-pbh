@@ -77,7 +77,7 @@
             $alertTitle = "Success!";
             $alertText = "About data updated successfully!";
             $alertIcon = "success";
-            $alertRedirect = "ui_about.php"; 
+            $alertRedirect = "ui_about"; 
             $btnColor = "#3085d6";
             $btnText = "Ok";
         } else {
@@ -86,7 +86,7 @@
             $alertTitle = "Error!";
             $alertText = "Something went wrong: " . mysqli_error($conn);
             $alertIcon = "error";
-            $alertRedirect = "ui_about.php"; 
+            $alertRedirect = "ui_about"; 
             $btnColor = "#d33";
             $btnText = "Try Again";
         }
@@ -227,7 +227,7 @@
                                 </div>
 
                                 <div class="custom-btn-group">
-                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard.php'"> Cancel </button>
+                                    <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard'"> Cancel </button>
                                     <button type="submit" class="btn btn-success custom-wide-btn" name="update_about"> Submit </button>
                                 </div>
 

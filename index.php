@@ -180,11 +180,11 @@
 		                                            About Us
 		                                        </a>
 		                                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-		                                            <a class="dropdown-item " href="about_us.php">About Us</a>
-		                                            <a class="dropdown-item " href="Gallery.php">GALLERY</a>
-		                                            <a class="dropdown-item " href="news-event.php">NEWS & EVENT</a>
+		                                            <a class="dropdown-item " href="about_us">About Us</a>
+		                                            <a class="dropdown-item " href="Gallery">GALLERY</a>
+		                                            <a class="dropdown-item " href="news-event">NEWS & EVENT</a>
 		                                            <a class="dropdown-item link-inside" href="#facilities">FACILITIES</a>
-		                                            <a class="dropdown-item " href="about_us.php#message">Message</a>
+		                                            <a class="dropdown-item " href="about_us#message">Message</a>
 		                                        </div>
 		                                    </li>
 											<li class="nav-item">
@@ -247,7 +247,7 @@
 						
 		                // हर स्लाइड के बटन के लिए अलग लिंक सेट करना
 		                if ($slide_counter == 1) {
-		                    $btn_link = "index#aboutSection"; // .php hata diya hai htaccess ke mutabik
+		                    $btn_link = "index#aboutSection"; //  hata diya hai htaccess ke mutabik
 		                    $btn_text = "EXPLORE OUR SERVICES";
 		                } elseif ($slide_counter == 2) {
 		                    $btn_link = "index#servicesSection";
@@ -894,7 +894,7 @@
 			                                <?php echo $News_Desc; ?>
 			                            </p>
 			                            
-			                            <a href="news-event.php?id=<?php echo $Id; ?>" class="btn-read-more" style="font-weight: 500; font-size: 14px; color: #0284c7; text-decoration: none;">
+			                            <a href="news-event?id=<?php echo $Id; ?>" class="btn-read-more" style="font-weight: 500; font-size: 14px; color: #0284c7; text-decoration: none;">
 			                                <i class="icon-play" style="font-size: 11px; margin-right: 5px;"></i>Read more
 			                            </a>
 			                        </div>
@@ -1008,7 +1008,7 @@
 
 						<ul class="row list-unstyled li-a">
 						    <li class="col-4"><a href="<?php echo $base_url; ?>">Home</a></li>
-						    <li class="col-4"><a href="about_us.php">About Us</a></li>
+						    <li class="col-4"><a href="about_us">About Us</a></li>
 						    <li class="col-4"><a href="#departmentsSection">Departments</a></li>
 						    <li class="col-4"><a href="#facilities">Facilities</a></li>
 						    <li class="col-4"><a href="#servicesSection">Service</a></li>
@@ -1016,9 +1016,9 @@
 						    <li class="col-4"><a href="#specialistsSection">Team</a></li>
 						    <li class="col-4"><a href="#contactSection">Contact Us</a></li>
 
-						    <li class="col-4"><a href="about_us.php#goal">Our Goal</a></li>
-						    <li class="col-4"><a href="news-event.php">News & Event</a></li>
-						    <li class="col-4"><a href="Gallery.php">Gallery</a></li>
+						    <li class="col-4"><a href="about_us#goal">Our Goal</a></li>
+						    <li class="col-4"><a href="news-event">News & Event</a></li>
+						    <li class="col-4"><a href="Gallery">Gallery</a></li>
 						</ul>
 					</div>
 				</div>
@@ -1123,7 +1123,7 @@
 	                <div class="modal-form">
 	                    <h3>Book an Appointment</h3>
 	                    
-	                    <form class="mt-15"  method="post" action="appointment.php">
+	                    <form class="mt-15"  method="post" action="appointment">
 	                        
 	                        <div class="input-group">
 	                            <span><i class="icon-user"></i></span>

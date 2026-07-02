@@ -6,7 +6,7 @@ include('config.php');
 
 // Agar admin session mein nahi hai to sign-in par bhej do
 if (!isset($_SESSION['admin'])) {
-    header("Location: admin_sign-in.php");
+    header("Location: admin_sign-in");
     exit();
 }
 ?>

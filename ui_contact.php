@@ -57,7 +57,7 @@
             $alertText = "Contact Page updated successfully!";
             $alertIcon = "success";
             $btnText = "Continue";
-            $alertRedirect = "ui_contact.php"; 
+            $alertRedirect = "ui_contact"; 
             
             $fetch = mysqli_query($conn, "SELECT * FROM ui_contact WHERE id = '".$row['id']."'");
             $row = mysqli_fetch_assoc($fetch);
@@ -133,7 +133,7 @@
                     </div>
 
                     <div class="custom-btn-group">
-                        <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard.php'"> Cancel </button>
+                        <button type="button" class="btn btn-outline-danger custom-wide-btn" onclick="window.location.href='user_dashboard'"> Cancel </button>
                         <button type="submit" class="btn btn-success custom-wide-btn" name="update"> Submit </button>
                     </div>
                 </form>

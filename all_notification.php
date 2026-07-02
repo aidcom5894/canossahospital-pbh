@@ -273,11 +273,11 @@
                 </div>
                 <div class="content-subheader__options">
                     <div class="content-subheader__search">
-                        <form method="GET" action="all_notification.php">
+                        <form method="GET" action="all_notification">
                             <input type="text" name="search" class="subheader-search__input" placeholder="Search notification..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" />
                             <input type="submit" class="subheader-search__submit" value="Search" />
                             <?php if(!empty($search_query) && isset($_GET['search']) && !empty(trim($_GET['search']))): ?>
-                                <a href="all_notification.php" class="search-clear-btn">Clear</a>
+                                <a href="all_notification" class="search-clear-btn">Clear</a>
                             <?php endif; ?>
                         </form>
                     </div>
@@ -319,7 +319,7 @@
                                         $senderName   = !empty($row['sender_name']) ? $row['sender_name'] : "System / Unknown";
                                         $senderAvatar = !empty($row['sender_avatar']) ? $row['sender_avatar'] : "medikit/images/default-avatar.png";
                                 ?>
-                                <a href="read-notification.php?id=<?php echo $id; ?>" class="desktop-row">
+                                <a href="read-notification?id=<?php echo $id; ?>" class="desktop-row">
                                     <div class="d-col-sr"><?php echo $count++; ?></div>
                                     <div class="d-col-avatar">
                                         <img src="<?php echo $senderAvatar; ?>" width="40" height="40" style="border-radius: 50%; object-fit: cover;" alt="avatar" />
@@ -351,7 +351,7 @@
                                     $senderName   = !empty($row['sender_name']) ? $row['sender_name'] : "System / Unknown";
                                     $senderAvatar = !empty($row['sender_avatar']) ? $row['sender_avatar'] : "medikit/images/default-avatar.png";
                             ?>
-                            <a href="read-notification.php?id=<?php echo $id; ?>" class="noti-mobile-card">
+                            <a href="read-notification?id=<?php echo $id; ?>" class="noti-mobile-card">
                                 <div class="card-main-content">
                                     <div class="card-avatar-box">
                                         <img src="<?php echo $senderAvatar; ?>" alt="sender photo" />
@@ -389,16 +389,16 @@
                                 $search_param = isset($_GET['search']) ? "&search=" . urlencode($_GET['search']) : "";
 
                                 if($page > 1) {
-                                    echo '<li><a href="all_notification.php?page='.($page - 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">PREV</a></li>';
+                                    echo '<li><a href="all_notification?page='.($page - 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">PREV</a></li>';
                                 }
 
                                 for($i = 1; $i <= $total_pages; $i++) {
                                     $active_class = ($i == $page) ? 'style="padding: 8px 12px; border: 1px solid #007bff; background: #007bff; color: #fff; text-decoration: none; font-weight: bold; display: inline-block; border-radius: 4px;"' : 'style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;"';
-                                    echo '<li><a href="all_notification.php?page='.$i.$search_param.'" '.$active_class.'>'.$i.'</a></li>';
+                                    echo '<li><a href="all_notification?page='.$i.$search_param.'" '.$active_class.'>'.$i.'</a></li>';
                                 }
 
                                 if($page < $total_pages) {
-                                    echo '<li><a href="all_notification.php?page='.($page + 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">NEXT</a></li>';
+                                    echo '<li><a href="all_notification?page='.($page + 1).$search_param.'" style="padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #007bff; display: inline-block; border-radius: 4px;">NEXT</a></li>';
                                 }
                             ?>
                         </ul>

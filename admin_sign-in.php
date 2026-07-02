@@ -2,8 +2,8 @@
     session_start();
     include('config.php');
     
-    error_reporting(E_ALL);
-    ini_set('display_errors',1);
+    // error_reporting(E_ALL);
+    // ini_set('display_errors',1);
 
     if(isset($_POST['submit'])){
 
@@ -24,7 +24,7 @@
                 <script>
                     setTimeout(() => {
                         swal("Login Successful!", "Welcome to Dashboard!", "success")
-                        .then(() => window.location.href="admin_dashboard.php");
+                        .then(() => window.location.href="admin_dashboard");
                     },100);
                 </script>';
                 exit();
@@ -34,7 +34,7 @@
                 <script>
                     setTimeout(() => {
                         swal("Invalid Password!", "Please enter correct password!", "error")
-                        .then(() => window.location.href="admin_sign-in.php");
+                        .then(() => window.location.href="admin_sign-in");
                     },100);
                 </script>';
                 exit();
@@ -46,7 +46,7 @@
             <script>
                 setTimeout(() => {
                     swal("Invalid Email!", "Email not found in system!", "error")
-                    .then(() => window.location.href="admin_sign-in.php");
+                    .then(() => window.location.href="admin_sign-in");
                 },100);
             </script>';
             exit();
@@ -221,7 +221,7 @@
     <div class="auth-right py-32 px-24 d-flex flex-column justify-content-center">
         <div class="max-w-464-px mx-auto w-100">
             <div>
-                <a href="admin_sign-in.php" class="mb-40 max-w-290-px">
+                <a href="admin_sign-in" class="mb-40 max-w-290-px">
                     <img src="assets/images/logo.png" alt="Image">
                 </a>
                 <h4 class="mb-12">Sign In to your Account</h4>
@@ -247,7 +247,7 @@
                             <input class="form-check-input border border-neutral-300" type="checkbox" value="" id="remeber"required>
                             <label class="form-check-label" for="remeber" >Remember me </label>
                         </div>
-                        <a href="admin_forgot-password.php" class="text-primary-600 fw-medium">Forgot Password?</a>
+                        <a href="admin_forgot-password" class="text-primary-600 fw-medium">Forgot Password?</a>
                     </div>
                 </div>
 
@@ -255,7 +255,7 @@
 
 
                 <div class="mt-32 text-center text-sm">
-                    <p class="mb-0">Don’t have an account? <a href="admin_sign-up.php" class="text-primary-600 fw-semibold">Sign Up</a></p>
+                    <p class="mb-0">Don’t have an account? <a href="admin_sign-up" class="text-primary-600 fw-semibold">Sign Up</a></p>
                 </div>
                 
             </form>

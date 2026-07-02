@@ -12,7 +12,7 @@
     // 1. VALIDATE NOTIFICATION ID
     // ==========================================
     if (!isset($_GET['id']) || empty(trim($_GET['id'])) || !is_numeric($_GET['id'])) {
-        echo "<script>window.location.href='all_notification.php';</script>";
+        echo "<script>window.location.href='all_notification';</script>";
         exit;
     }
 
@@ -29,8 +29,8 @@
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) == 0) {
-        echo "<div style='padding: 40px; text-align: center; color: red; font-weight: bold;'>Notification not found or already read! <a href='all_notification.php'>Go Back</a></div>";
-        include('user_masterpage/user_footer.php');
+        echo "<div style='padding: 40px; text-align: center; color: red; font-weight: bold;'>Notification not found or already read! <a href='all_notification'>Go Back</a></div>";
+        include('user_masterpage/user_footer');
         exit;
     }
 
@@ -151,7 +151,7 @@
             <h2 class="content-subheader__title">Notification Details (Read & Removed)</h2>
         </div>
         <div class="content-subheader__options">
-            <a href="all_notification.php" class="custom-back-btn">
+            <a href="all_notification" class="custom-back-btn">
                 ← Back to All Notifications
             </a>
         </div>
@@ -190,7 +190,7 @@
             </div>
 
             <div style="margin-top: 30px; border-top: 1px solid #edf2f9; padding-top: 20px; display: flex; justify-content: flex-end;">
-                <a href="all_notification.php" style="color: #3b82f6; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='#1d4ed8'" onmouseout="this.style.color='#3b82f6'">
+                <a href="all_notification" style="color: #3b82f6; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='#1d4ed8'" onmouseout="this.style.color='#3b82f6'">
                     Close & Return →
                 </a>
             </div>

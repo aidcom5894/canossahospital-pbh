@@ -1,8 +1,8 @@
 <?php 
     include('config.php');
 
-    error_reporting(E_ALL);
-    ini_set('display_errors',1);
+    // error_reporting(E_ALL);
+    // ini_set('display_errors',1);
 
 
     if (isset($_POST['submit'])) {
@@ -28,7 +28,7 @@
                             text: "Only Admin is allowed to Sign-up.",
                             icon: "warning"
                         }).then(function() {
-                            window.location.href = "admin_sign-in.php";
+                            window.location.href = "admin_sign-in";
                         });
                     }, 100);
                 </script>';
@@ -53,7 +53,7 @@
                     icon: "success",
                     confirmButtonText: "Continue"
                     }).then(function() {
-                        window.location.href = "admin_sign-in.php";
+                        window.location.href = "admin_sign-in";
                     }); 
                 }, 100);
             </script>';
@@ -234,7 +234,7 @@
             <div class="max-w-464-px mx-auto w-100">
 
                 <div>
-                    <a href="admin_sign-up.php" class="mb-40 max-w-290-px">
+                    <a href="admin_sign-up" class="mb-40 max-w-290-px">
                         <img src="assets/images/logo.png" alt="Image">
                     </a>
                     <h4 class="mb-12">Sign Up to your Account</h4>
@@ -312,7 +312,7 @@
 
 
                     <div class="mt-32 text-center text-sm">
-                        <p class="mb-0">Already have an account? <a href="admin_sign-in.php" class="text-primary-600 fw-semibold">Sign In</a></p>
+                        <p class="mb-0">Already have an account? <a href="admin_sign-in" class="text-primary-600 fw-semibold">Sign In</a></p>
                     </div>
                     
                 </form>

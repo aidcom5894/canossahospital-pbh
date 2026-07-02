@@ -112,14 +112,14 @@
             }
             
             // CHANGED: रिडायरेक्ट टू index.php
-            header("Location: index.php");
+            header("Location: " . $base_url);
             exit();
         } else {
             $_SESSION['appointment_status'] = "error";
             $_SESSION['appointment_message'] = "Database Error: " . mysqli_error($conn);
             
-            // CHANGED: रिडायरेक्ट टू index.php
-            header("Location: index.php");
+            // CHANGED: रिडायरेक्ट टू ui
+            header("Location: " . $base_url);
             exit();
         }
     }   

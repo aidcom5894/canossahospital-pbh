@@ -27,7 +27,7 @@
             $alertTitle = "OTP Verified!";
             $alertText = "Set your new password";
             $alertIcon = "success";
-            $alertRedirect = "reset_password.php?email=" . urlencode($Email); 
+            $alertRedirect = "reset_password?email=" . urlencode($Email); 
             $btnColor = "#4e73df";
             $btnText = "Continue";
         } else {
@@ -151,7 +151,7 @@
                            inputmode="numeric" 
                            pattern="\d*">
                     <div class="text-center mt-2">
-                        <small class="text-muted">Didn't receive code? <a href="forgot-password.php" class="text-primary text-decoration-none">Resend</a></small>
+                        <small class="text-muted">Didn't receive code? <a href="forgot-password" class="text-primary text-decoration-none">Resend</a></small>
                     </div>
                 </div>
                 <button type="submit" name="verify" class="btn btn-primary w-100 radius-12 h-56-px fw-bold">
@@ -180,7 +180,7 @@
                     title: "Time Expired",
                     text: "OTP expired! Please send OTP again."
                 }).then(function(){
-                    window.location.href = "forgot-password.php";
+                    window.location.href = "forgot-password";
                 });
             }
             timeLeft--;

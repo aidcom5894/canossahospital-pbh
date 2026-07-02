@@ -5,8 +5,8 @@
 		
 				<nav class="sidebar-menu"> 
 					<ul>
-						<li class="dashboard"><a href="admin_dashboard.php"><b>Dashboard</b></a></li>
-						<li class="components has-submenu"><a href="admin_dashboard.php#"><b>UI Management<span class="submenu-arrow"></span></b></a>
+						<li class="dashboard"><a href="admin_dashboard"><b>Dashboard</b></a></li>
+						<li class="components has-submenu"><a href="admin_dashboard#"><b>UI Management<span class="submenu-arrow"></span></b></a>
 							<ul class="sidebar-menu__submenu">
 								<li><a href="admin_dashboard__grid.html">Grid</a></li>
 								<li><a href="admin_dashboard__charts.html">Charts</a></li>
@@ -18,16 +18,16 @@
 							</ul>
 						</li>
 
-						<li class="doctors has-submenu"><a href="admin_dashboard.php#"><b>Message<span class="submenu-arrow"></span></b></a>
+						<li class="doctors has-submenu"><a href="admin_dashboard#"><b>Message<span class="submenu-arrow"></span></b></a>
 							<ul class="sidebar-menu__submenu">
-								<li><a href="admin_notification.php">Send Notification</a></li>
+								<li><a href="admin_notification">Send Notification</a></li>
 							</ul>
 						</li>
 		
-						<li class="settings has-submenu"><a href="admin_dashboard.php#"><b>Settings<span class="submenu-arrow"></span></b></a>
+						<li class="settings has-submenu"><a href="admin_dashboard#"><b>Settings<span class="submenu-arrow"></span></b></a>
 							<ul class="sidebar-menu__submenu">
-								<li><a href="admin_forgot-password.php">Forgot-Password</a></li>
-								<li><a href="admin_logout.php">Logout</a></li>
+								<li><a href="admin_forgot-password">Forgot-Password</a></li>
+								<li><a href="admin_logout">Logout</a></li>
 							</ul>
 						</li>
 					</ul>
