@@ -589,4 +589,4 @@
         }
     </script>
 
-<?php include('user_masterpage/user_footer'); ?>
+<?php include('user_masterpage/user_footer.php'); ?>
